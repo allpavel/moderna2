@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import Services from "../components/Services/Services";
 import WhyUs from "../components/WhyUs/WhyUs";
+import Features from "../components/Features/Features";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Hero />
             <Services />
             <WhyUs />
+            <Features />
         </Layout>
     );
 }
