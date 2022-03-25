@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Bottom from "../Bottom/Bottom";
+import Newsletter from "../Newsletter/Newsletter";
 
-const Wrapper = styled.footer``;
+const Wrapper = styled.footer`
+`;
 
 const Footer = () => {
     return (
         <Wrapper>
-            <h2>This is a Footer</h2>
+            <Newsletter />
+            <Bottom />
         </Wrapper>
     );
 };

@@ -13,9 +13,10 @@ const GlobalStyles = createGlobalStyle`
     :root {
         --main-color: #a2cce3;
         --hero-color: #68A4C4;
+        --footer-main-color: #0d2735;
+        --footer-bottom-color: #0b212d;
         --max-width-desktop: 1296px;
         --primary-font: 'Roboto', sans-serif;
-
     }
 
     html {
