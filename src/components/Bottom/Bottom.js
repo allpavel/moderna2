@@ -5,12 +5,12 @@ const Wrapper = styled.article`
     background-color: var(--footer-bottom-color);
     color: #fff;
     padding-bottom: 2rem;
+`;
 
-    div {
-        max-width: var(--max-width-desktop);
-        text-align: center;
-        margin: 0 auto;
-    }
+const Container = styled.div`
+    max-width: var(--max-width-desktop);
+    text-align: center;
+    margin: 0 auto;
 `;
 
 const Copyright = styled.div`
@@ -29,7 +29,7 @@ const Credits = styled.div`
 const Bottom = () => {
     return (
         <Wrapper>
-            <div>
+            <Container>
                 <Copyright>
                     © Copyright <strong>Pavel Alloyarov</strong>. All Rights
                     Reserved
@@ -37,7 +37,7 @@ const Bottom = () => {
                 <Credits>
                     Designed by <span>Pavel Alloyarov</span>
                 </Credits>
-            </div>
+            </Container>
         </Wrapper>
     );
 };
