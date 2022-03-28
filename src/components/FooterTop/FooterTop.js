@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BiChevronRight } from "react-icons/bi";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Wrapper = styled.article`
@@ -16,7 +17,22 @@ const Container = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 `;
 
-const Links = styled.div``;
+const Links = styled.div`
+    li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 10px 0;
+        line-height: 1;
+
+        svg {
+            color: var(--main-color);
+            font-size: 1.125rem;
+            padding-right: 2px;
+            margin-bottom: 2px;
+        }
+    }
+`;
 
 const Contact = styled.div``;
 
@@ -29,21 +45,51 @@ const FooterTop = () => {
                 <Links>
                     <h3>Useful Links</h3>
                     <ul>
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Services</li>
-                        <li>Terms of service</li>
-                        <li>Privacy policy</li>
+                        <li>
+                            <BiChevronRight />
+                            Home
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            About us
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Services
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Terms of service
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Privacy policy
+                        </li>
                     </ul>
                 </Links>
                 <Links>
                     <h3>Our Services</h3>
                     <ul>
-                        <li>Web Design</li>
-                        <li>Web Development</li>
-                        <li>Product Management</li>
-                        <li>Marketing</li>
-                        <li>Graphic Design</li>
+                        <li>
+                            <BiChevronRight />
+                            Web Design
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Web Development
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Product Management
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Marketing
+                        </li>
+                        <li>
+                            <BiChevronRight />
+                            Graphic Design
+                        </li>
                     </ul>
                 </Links>
                 <Contact>
