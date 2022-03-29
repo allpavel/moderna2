@@ -64,6 +64,14 @@ const Item = styled.article`
     div p:nth-child(2) {
         font-style: italic;
     }
+
+    :nth-child(2) h3 {
+        padding-top: 0;
+    }
+
+    div h3 {
+        padding-top: 2rem;
+    }
 `;
 
 const Text = styled.div`

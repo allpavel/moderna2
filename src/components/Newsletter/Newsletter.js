@@ -35,7 +35,7 @@ const SubcribeForm = styled.div`
             font-size: 1rem;
             height: 2rem;
             border: 0;
-            width: calc(100% - 110px);
+            width: calc(100% - 120px);
         }
 
         input[type="submit"] {
