@@ -8,6 +8,8 @@ const Wrapper = styled.article`
     padding: 3.125rem 0;
     background-color: var(--footer-main-color);
     color: #fff;
+    border-top: 2px solid #17455e;
+    border-bottom: 2px solid #17455e;
 `;
 
 const Container = styled.div`
@@ -18,6 +20,9 @@ const Container = styled.div`
 `;
 
 const Links = styled.div`
+    h3 {
+        color: var(--main-color);
+    }
     li {
         display: flex;
         align-items: center;
@@ -34,9 +39,22 @@ const Links = styled.div`
     }
 `;
 
-const Contact = styled.div``;
+const Contact = styled.div`
+    h3 {
+        color: var(--main-color);
+    }
 
-const Info = styled.div``;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+`;
+
+const Info = styled.div`
+    h3 {
+        color: var(--main-color);
+    }
+`;
 
 const FooterTop = () => {
     return (
