@@ -1,6 +1,7 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
 import Roboto from "../../fonts/Roboto.woff2";
+import RobotoLight from '../../fonts/Roboto-Light.woff2'
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
@@ -8,6 +9,13 @@ const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: 'Roboto';
         src: url(${Roboto}) format('woff2');
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url(${RobotoLight}) format('woff2');
+        font-weight: 300;
     }
 
     :root {
@@ -40,6 +48,10 @@ const GlobalStyles = createGlobalStyle`
 
     main {
         display: block;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--primary-font);
     }
 
 
@@ -92,11 +104,11 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ index, children }) => {
     return (
         <>
             <GlobalStyles />
-            <Header />
+            <Header index={index} />
             {children}
             <Footer />
         </>

@@ -8,12 +8,14 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 export default function Home() {
     return (
-        <Layout>
-            <Hero />
-            <Services />
-            <WhyUs />
-            <Features />
-            <ScrollToTop />
+        <Layout index={true}>
+            <main>
+                <Hero />
+                <Services />
+                <WhyUs />
+                <Features />
+                <ScrollToTop />
+            </main>
         </Layout>
     );
 }
