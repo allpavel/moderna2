@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AboutUs from "../components/aboutPage/AboutUs/AboutUs.js";
 import Breadcrumbs from "../components/aboutPage/Breadcrumbs/Breadcrumbs.js";
+import Facts from "../components/aboutPage/Facts/Facts.js";
 import Layout from "../components/Layout/Layout.js";
 
 const Wrapper = styled.main`
@@ -14,6 +15,7 @@ const About = () => {
             <Wrapper>
                 <Breadcrumbs />
                 <AboutUs />
+                <Facts />
             </Wrapper>
         </Layout>
     );
