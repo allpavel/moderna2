@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
     padding: 1rem 0;
-    background-color: #f3f8fa;
+    background-color: var(--light-blue-color);
 `;
 
 const Container = styled.div`
