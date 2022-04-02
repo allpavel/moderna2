@@ -4,6 +4,7 @@ import AboutUs from "../components/aboutPage/AboutUs/AboutUs.js";
 import Breadcrumbs from "../components/aboutPage/Breadcrumbs/Breadcrumbs.js";
 import Facts from "../components/aboutPage/Facts/Facts.js";
 import Skills from "../components/aboutPage/Skills/Skills.js";
+import Testimonials from "../components/aboutPage/Testimonials/Testimonials.js";
 import Layout from "../components/Layout/Layout.js";
 
 const Wrapper = styled.main`
@@ -18,6 +19,7 @@ const About = () => {
                 <AboutUs />
                 <Facts />
                 <Skills />
+                <Testimonials />
             </Wrapper>
         </Layout>
     );
