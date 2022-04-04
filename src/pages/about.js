@@ -13,7 +13,7 @@ const Wrapper = styled.main`
 
 const About = () => {
     return (
-        <Layout index={false}>
+        <Layout>
             <Wrapper>
                 <Breadcrumbs />
                 <AboutUs />

@@ -1,7 +1,7 @@
 import React from "react";
 import { createGlobalStyle, keyframes } from "styled-components";
 import Roboto from "../../fonts/Roboto.woff2";
-import RobotoLight from '../../fonts/Roboto-Light.woff2'
+import RobotoLight from "../../fonts/Roboto-Light.woff2";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
@@ -105,11 +105,11 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-const Layout = ({ index, children }) => {
+const Layout = ({ children }) => {
     return (
         <>
             <GlobalStyles />
-            <Header index={index} />
+            <Header />
             {children}
             <Footer />
         </>
