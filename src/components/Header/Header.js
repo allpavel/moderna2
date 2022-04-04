@@ -1,7 +1,16 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { useLocation } from "@reach/router";
 import Logo from "../Logo/Logo";
 import Navbar from "../Navbar/Navbar";
+
+const IndexHeader = css`
+    background-color: ${({ header }) => (header ? "rgba(30, 67, 86, 0.8)" : "transparent")};
+`;
+
+const NormalHeader = css`
+    background-color: ${({ header }) => (header ? "rgba(30, 67, 86, 0.8)" : "rgb(30, 67, 86)")};
+`;
 
 const Wrapper = styled.header`
     height: 3.75rem;
@@ -10,8 +19,8 @@ const Wrapper = styled.header`
     right: 0;
     left: 0;
     z-index: 1000;
-    background-color: ${({ header }) => header ? "rgba(30, 67, 86, 0.8)" : "transparent"};
-    transition: all .5s ease;
+    ${({ location }) => location.pathname === '/' ? IndexHeader : NormalHeader}
+    transition: all 0.5s ease;
 `;
 
 const Container = styled.div`
@@ -26,6 +35,7 @@ const Container = styled.div`
 
 const Header = () => {
     const [header, setHeader] = useState(false);
+    const location = useLocation();
 
     const changeHeaderBackground = () => {
         if (window.scrollY >= 80) {
@@ -38,7 +48,7 @@ const Header = () => {
     window.addEventListener("scroll", changeHeaderBackground);
 
     return (
-        <Wrapper header={header}>
+        <Wrapper header={header} location={location}>
             <Container>
                 <Logo />
                 <Navbar />
