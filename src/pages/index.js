@@ -8,7 +8,7 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 export default function Home() {
     return (
-        <Layout index={true}>
+        <Layout>
             <main>
                 <Hero />
                 <Services />

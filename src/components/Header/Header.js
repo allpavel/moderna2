@@ -11,7 +11,6 @@ const Wrapper = styled.header`
     left: 0;
     z-index: 1000;
     background-color: ${({ header }) => header ? "rgba(30, 67, 86, 0.8)" : "transparent"};
-    background-color: ${({ index }) => index ? "transparent" : "#1e4356"};
     transition: all .5s ease;
 `;
 
@@ -25,7 +24,7 @@ const Container = styled.div`
     margin: 0 auto;
 `;
 
-const Header = ({ index }) => {
+const Header = () => {
     const [header, setHeader] = useState(false);
 
     const changeHeaderBackground = () => {
@@ -39,7 +38,7 @@ const Header = ({ index }) => {
     window.addEventListener("scroll", changeHeaderBackground);
 
     return (
-        <Wrapper header={header} index={index}>
+        <Wrapper header={header}>
             <Container>
                 <Logo />
                 <Navbar />
