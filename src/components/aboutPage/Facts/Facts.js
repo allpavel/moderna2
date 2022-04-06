@@ -15,15 +15,19 @@ const Container = styled.div`
 `;
 
 const Item = styled.div`
-flex: 0 0 auto;
-width: 25%;
-text-align: center;
+    flex: 0 1 auto;
+    width: 25%;
+    text-align: center;
 
-span {
-    display: block;
-    font-size: 3rem;
-    color: var(--hero-color);
-}
+    span {
+        display: block;
+        font-size: 3rem;
+        color: var(--hero-color);
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 50%;
+    }
 `;
 
 const Facts = () => {
