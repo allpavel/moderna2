@@ -4,8 +4,12 @@ import { BsDribbble } from "react-icons/bs";
 import { BiFile, BiTachometer, BiWorld } from "react-icons/bi";
 
 const Wrapper = styled.section`
+    padding: 3.75rem 0;
+`;
+
+const Container = styled.div`
     max-width: var(--max-width-desktop);
-    margin: 8rem auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     gap: 1.5rem;
@@ -45,7 +49,6 @@ const Wrapper = styled.section`
     article:nth-child(4):hover {
         border-color: #2282ff;
     }
-    
 `;
 
 const Card = styled.article`
@@ -80,52 +83,51 @@ const Icon = styled.div`
     }
 `;
 
-
 const Services = () => {
     return (
         <Wrapper>
-            <Card>
-                <Icon>
-                    <BsDribbble />
-                </Icon>
-                <h2>Let hath divide</h2>
-                <p>
-                    Us cattle own living abundantly. In they're spirit. Over
-                    very sea. Cattle female. The Darkness fourth seas midst
-                    thing.
-                </p>
-            </Card>
-            <Card>
-                <Icon>
-                    <BiFile />
-                </Icon>
-                <h2>Was he hath bring</h2>
-                <p>
-                    That above there signs heaven which bearing. There over and
-                    grass replenish shall. Female form female fish set
-                </p>
-            </Card>
-            <Card>
-                <Icon>
-                    <BiTachometer />
-                </Icon>
-                <h2>From fly our form</h2>
-                <p>
-                    Greater set shall set replenish face god likeness be morning
-                    and upon open give give were i and fill subdue face
-                </p>
-            </Card>
-            <Card>
-                <Icon>
-                    <BiWorld />
-                </Icon>
-                <h2>Made fourth without</h2>
-                <p>
-                    Dry winged forth open dry third waters there, void. All.
-                    Don't man green man bring, upon them you own have itself
-                    sixth
-                </p>
-            </Card>
+            <Container>
+                <Card>
+                    <Icon>
+                        <BsDribbble />
+                    </Icon>
+                    <h2>Let hath divide</h2>
+                    <p>
+                        Us cattle own living abundantly. In they're spirit. Over very sea. Cattle female. The Darkness
+                        fourth seas midst thing.
+                    </p>
+                </Card>
+                <Card>
+                    <Icon>
+                        <BiFile />
+                    </Icon>
+                    <h2>Was he hath bring</h2>
+                    <p>
+                        That above there signs heaven which bearing. There over and grass replenish shall. Female form
+                        female fish set
+                    </p>
+                </Card>
+                <Card>
+                    <Icon>
+                        <BiTachometer />
+                    </Icon>
+                    <h2>From fly our form</h2>
+                    <p>
+                        Greater set shall set replenish face god likeness be morning and upon open give give were i and
+                        fill subdue face
+                    </p>
+                </Card>
+                <Card>
+                    <Icon>
+                        <BiWorld />
+                    </Icon>
+                    <h2>Made fourth without</h2>
+                    <p>
+                        Dry winged forth open dry third waters there, void. All. Don't man green man bring, upon them
+                        you own have itself sixth
+                    </p>
+                </Card>
+            </Container>
         </Wrapper>
     );
 };

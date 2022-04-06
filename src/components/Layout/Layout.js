@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
     html {
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
     }
 
     body {
