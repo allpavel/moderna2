@@ -30,6 +30,7 @@ const Text = styled.div`
     background-color: #fff;
     padding: 2rem;
     border-top: 4px solid #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 
     h2 {
