@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BiFingerprint, BiGift } from "react-icons/bi";
 
 const Wrapper = styled.section`
-    background-color: #f3f8fa;
+    background-color: var(--light-blue-color);
     padding: 3.75rem 0;
 `;
 
@@ -46,7 +46,7 @@ const Text = styled.div`
 `;
 
 const Video = styled.div`
-padding: 1rem;
+    padding: 1rem;
 `;
 
 const Icon = styled.div`
@@ -88,9 +88,8 @@ const WhyUs = () => {
                         </Icon>
                         <h2>Unto multiply stars</h2>
                         <p>
-                            Feugiat lorem potenti purus elementum facilisi.
-                            Ullamcorper. Cubilia. Congue donec curabitur leo per
-                            faucibus lobortis magnis laoreet cras lobortis id
+                            Feugiat lorem potenti purus elementum facilisi. Ullamcorper. Cubilia. Congue donec curabitur
+                            leo per faucibus lobortis magnis laoreet cras lobortis id
                         </p>
                     </div>
                     <div>
@@ -99,9 +98,8 @@ const WhyUs = () => {
                         </Icon>
                         <h2>Fowl whales man</h2>
                         <p>
-                            Fruit the it you their grass appear one. Said after
-                            them form isn't us. Upon blessed above given isn't
-                            after
+                            Fruit the it you their grass appear one. Said after them form isn't us. Upon blessed above
+                            given isn't after
                         </p>
                     </div>
                 </Text>
