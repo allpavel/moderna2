@@ -45,16 +45,16 @@ const Container = styled.div`
     }
 `;
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ page }) => {
     return (
         <Wrapper>
             <Container>
-                <h2>About Us</h2>
+                <h2>{page}</h2>
                 <ol>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
-                    <li>About Us</li>
+                    <li>{page}</li>
                 </ol>
             </Container>
         </Wrapper>
