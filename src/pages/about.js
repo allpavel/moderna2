@@ -15,7 +15,7 @@ const About = () => {
     return (
         <Layout>
             <Wrapper>
-                <Breadcrumbs />
+                <Breadcrumbs page="About Us" />
                 <AboutUs />
                 <Facts />
                 <Skills />
