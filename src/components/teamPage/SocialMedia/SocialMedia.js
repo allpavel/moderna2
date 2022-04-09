@@ -13,7 +13,7 @@ export const SocialMedia = styled.div`
     opacity: 0;
     left: 0;
     right: 0;
-    transition: bottom 0.4s ease-in-out;
+    transition: bottom 0.4s ease;
 
     svg {
         font-size: 1.125rem;
