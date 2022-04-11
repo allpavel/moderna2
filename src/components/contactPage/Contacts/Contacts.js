@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Location from "../LocationInfo/LocationInfo";
+import ContactInfo from "../ContactForm/ContactForm";
+import LocationInfo from "../LocationInfo/LocationInfo";
 
 const Wrapper = styled.section`
     padding: 3.75rem 0;
@@ -14,17 +15,12 @@ const Container = styled.div`
     gap: 1.5rem;
 `;
 
-const Form = styled.div`
-    height: 200px;
-    outline: 2px solid green;
-`;
-
 const Contacts = () => {
     return (
         <Wrapper>
             <Container>
-                <Location />
-                <Form />
+                <LocationInfo />
+                <ContactInfo />
             </Container>
         </Wrapper>
     );
