@@ -49,7 +49,7 @@ const Container = styled.div`
 
 const MenuIcon = styled(MdMenu)`
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 991px) {
         display: block;
         width: 2rem;
         height: 2rem;
@@ -61,7 +61,7 @@ const MenuIcon = styled(MdMenu)`
 
 const CloseIcon = styled(MdClose)`
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 991px) {
         display: block;
         width: 2rem;
         height: 2rem;

@@ -20,7 +20,7 @@ const Wrapper = styled.nav`
     z-index: 10;
     transition: all 0.4s ease;
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 991px) {
         display: none;
     }
 
