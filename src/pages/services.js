@@ -16,10 +16,10 @@ const ServicesPage = () => {
         <Layout>
             <Wrapper>
                 <Breadcrumbs />
-                <Services />
+                {/* <Services />
                 <WhyUs />
                 <ServicesDetails />
-                <Pricing />
+                <Pricing /> */}
             </Wrapper>
         </Layout>
     );

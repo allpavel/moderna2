@@ -35,6 +35,10 @@ const Wrapper = styled.nav`
     .active {
         color: var(--main-color);
     }
+
+    @media screen and (max-width: 769px) {
+        display: none;
+    }
 `;
 
 const Dropdown = styled.li`
@@ -98,7 +102,9 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/about" activeClassName="active">About</Link>
+                    <Link to="/about" activeClassName="active">
+                        About
+                    </Link>
                 </li>
                 <li>
                     <Link to="/services">Services</Link>

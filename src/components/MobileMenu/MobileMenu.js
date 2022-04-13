@@ -17,8 +17,8 @@ const Wrapper = styled.nav`
     bottom: 0;
     background-color: rgba(17, 38, 48, 0.95);
     overflow: hidden;
-    z-index: 1000;
-    transition: height 0.4s ease;
+    z-index: 10;
+    transition: all 0.4s ease;
 
     @media screen and (min-width: 769px) {
         display: none;

@@ -17,9 +17,9 @@ export default function Home() {
             <Hero />
             <Wrapper>
                 <Services />
-                <WhyUs />
+                {/* <WhyUs />
                 <Features />
-                <ScrollToTop />
+                <ScrollToTop /> */}
             </Wrapper>
         </Layout>
     );
