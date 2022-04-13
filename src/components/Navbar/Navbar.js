@@ -1,6 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { BsChevronDown, BsChevronRight } from "react-icons/bs";
+
+const ChevronDown = styled(BsChevronDown)`
+    color: #fff;
+    font-size: 0.75rem;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+`;
+
+const ChevronRight = styled(BsChevronRight)`
+    color: #000;
+    font-size: 0.75rem;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+`;
 
 const Wrapper = styled.nav`
     height: 100%;
@@ -30,13 +45,21 @@ const Wrapper = styled.nav`
 
     li a:hover {
         color: var(--main-color);
+
+        ${ChevronDown} {
+            color: var(--main-color);
+        }
+
+        ${ChevronRight} {
+            color: var(--main-color);
+        }
     }
 
     .active {
         color: var(--main-color);
     }
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 991px) {
         display: none;
     }
 `;
@@ -59,7 +82,6 @@ const Dropdown = styled.li`
         position: absolute;
         left: 0;
         top: calc(100% + 1.875rem);
-        background: #fff;
         box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
         opacity: 0;
         visibility: hidden;
@@ -69,6 +91,7 @@ const Dropdown = styled.li`
     }
 
     ul li {
+        background-color: #fff;
         min-width: 150px;
         padding: 0;
     }
@@ -119,13 +142,17 @@ const Navbar = () => {
                     <Link to="/blog">Blog</Link>
                 </li>
                 <Dropdown>
-                    <a href="#">Dropdown</a>
+                    <a href="#">
+                        Dropdown <ChevronDown />
+                    </a>
                     <ul>
                         <li>
                             <a href="#">Dropdown 1</a>
                         </li>
                         <Dropdown>
-                            <a href="#">Dropdown 2</a>
+                            <a href="#">
+                                Dropdown 2 <ChevronRight />
+                            </a>
                             <ul>
                                 <li>
                                     <a href="#">Deep Dropdown 1</a>
