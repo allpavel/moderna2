@@ -57,21 +57,33 @@ const Item = styled.article`
     display: grid;
     gap: 2rem;
 
+    .gatsby-image-wrapper {
+        grid-area: image;
+    }
+
     :nth-child(2n) {
         grid-template-columns: 40% 60%;
+        grid-template-areas: "image text";
 
         @media screen and (max-width: 575px) {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto;
+            grid-template-areas:
+                "image"
+                "text";
         }
     }
 
     :nth-child(2n + 1) {
         grid-template-columns: 60% 40%;
+        grid-template-areas: "text image";
 
         @media screen and (max-width: 575px) {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto;
+            grid-template-areas:
+                "image"
+                "text";
         }
     }
 
@@ -98,6 +110,7 @@ const Item = styled.article`
 `;
 
 const Text = styled.div`
+    grid-area: text;
     h3 {
         font-weight: 400;
         font-size: 1.5rem;
@@ -122,6 +135,9 @@ const Text = styled.div`
             font-size: 1.25rem;
             padding-right: 4px;
             vertical-align: -0.2rem;
+        }
+        &:last-child {
+            padding-bottom: 0;
         }
     }
 `;
@@ -159,6 +175,7 @@ const Features = () => {
                 </Text>
             </Item>
             <Item>
+                <StaticImage src="../../../images/features-2.svg" alt="" layout="constrained" placeholder="tracedSVG" />
                 <Text>
                     <h3>Greater whose fifth sixth very and may life.</h3>
                     <p>
@@ -173,7 +190,6 @@ const Features = () => {
                         fill for were
                     </p>
                 </Text>
-                <StaticImage src="../../../images/features-2.svg" alt="" layout="constrained" placeholder="tracedSVG" />
             </Item>
             <Item>
                 <StaticImage src="../../../images/features-3.svg" alt="" layout="constrained" placeholder="tracedSVG" />
@@ -201,6 +217,7 @@ const Features = () => {
                 </Text>
             </Item>
             <Item>
+                <StaticImage src="../../../images/features-4.svg" alt="" layout="constrained" placeholder="tracedSVG" />
                 <Text>
                     <h3>Saw dominion bearing without second likeness</h3>
                     <p>
@@ -215,7 +232,6 @@ const Features = () => {
                         fill for were
                     </p>
                 </Text>
-                <StaticImage src="../../../images/features-4.svg" alt="" layout="constrained" placeholder="tracedSVG" />
             </Item>
         </Wrapper>
     );
