@@ -5,6 +5,10 @@ import { BiFile, BiTachometer, BiWorld } from "react-icons/bi";
 
 const Wrapper = styled.section`
     padding: 3.75rem 0;
+
+    @media screen and (max-width: 575px) {
+        padding: 3rem 0 2rem;
+    }
 `;
 
 const Container = styled.div`
@@ -49,6 +53,10 @@ const Container = styled.div`
     article:nth-child(4):hover {
         border-color: #2282ff;
     }
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Card = styled.article`
@@ -67,6 +75,16 @@ const Card = styled.article`
     p {
         line-height: 28px;
         margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 575px) {
+        h2 {
+            margin: 1rem 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
     }
 `;
 

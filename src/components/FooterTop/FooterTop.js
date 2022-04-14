@@ -10,6 +10,10 @@ const Wrapper = styled.article`
     color: #fff;
     border-top: 2px solid #17455e;
     border-bottom: 2px solid #17455e;
+
+    @media screen and (max-width: 575px) {
+        padding: 2rem 0;
+    }
 `;
 
 const Container = styled.div`
@@ -17,6 +21,10 @@ const Container = styled.div`
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Links = styled.div`
@@ -35,6 +43,15 @@ const Links = styled.div`
             font-size: 1.125rem;
             padding-right: 2px;
             margin-bottom: 2px;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        h3 {
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 0;
         }
     }
 `;
@@ -127,9 +144,8 @@ const FooterTop = () => {
                 <Info>
                     <h3>About Moderna</h3>
                     <p>
-                        Wherein shall have itself deep. Two let. Herb, fowl our.
-                        Isn't waters stars cattle shall may thing brought. Of
-                        you're was meat so.
+                        Wherein shall have itself deep. Two let. Herb, fowl our. Isn't waters stars cattle shall may
+                        thing brought. Of you're was meat so.
                     </p>
                     <SocialLinks />
                 </Info>

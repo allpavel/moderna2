@@ -5,6 +5,10 @@ import { BiFingerprint, BiGift } from "react-icons/bi";
 const Wrapper = styled.section`
     background-color: var(--light-blue-color);
     padding: 3.75rem 0;
+
+    @media screen and (max-width: 575px) {
+        padding: 2rem 0;
+    }
 `;
 
 const Content = styled.div`
@@ -14,6 +18,11 @@ const Content = styled.div`
     box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
     display: grid;
     grid-template-columns: 50% 50%;
+
+    @media screen and (max-width: 575px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
 `;
 
 const Text = styled.div`
@@ -43,10 +52,24 @@ const Text = styled.div`
         margin-left: 5.875rem;
         line-height: 1.5rem;
     }
+
+    @media screen and (max-width: 575px) {
+        padding: 1rem 2rem;
+
+        h2 {
+            font-size: 1.125rem;
+        }
+    }
 `;
 
 const Video = styled.div`
     padding: 1rem;
+
+    @media screen and (max-width: 575px) {
+        iframe {
+            height: 200px;
+        }
+    }
 `;
 
 const Icon = styled.div`
