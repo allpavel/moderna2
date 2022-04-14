@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeroImage from "../../images/hero-bg.webp";
+import HeroImage from "../../../images/hero-bg.webp";
 import HeroSwiper from "../HeroSwiper/HeroSwiper";
 
 const Wrapper = styled.section`
@@ -28,11 +28,7 @@ const Wrapper = styled.section`
 
     ::after {
         content: "";
-        background: linear-gradient(
-                to right,
-                rgba(30, 67, 86, 0.8),
-                rgba(30, 67, 86, 0.6)
-            ),
+        background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)),
             url(${HeroImage}) center top no-repeat;
         position: absolute;
         top: 0;
@@ -44,7 +40,6 @@ const Wrapper = styled.section`
         border-radius: 0 0 50% 50%;
     }
 `;
-
 
 const Hero = () => {
     return (

@@ -6,6 +6,10 @@ const Wrapper = styled.article`
     padding: 3.125rem 0;
     background-color: var(--footer-main-color);
     color: #fff;
+
+    @media screen and (max-width: 575px) {
+        padding: 2rem 0;
+    }
 `;
 
 const Container = styled.div`
@@ -13,6 +17,10 @@ const Container = styled.div`
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Text = styled.div`
@@ -20,6 +28,15 @@ const Text = styled.div`
 
     h2 {
         color: var(--main-color);
+    }
+
+    @media screen and (max-width: 575px) {
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
     }
 `;
 
@@ -50,7 +67,7 @@ const SubcribeForm = styled.div`
             background-color: var(--hero-color);
             font-size: 1rem;
             color: #fff;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
 
             :hover {
@@ -66,10 +83,7 @@ const Newsletter = () => {
             <Container>
                 <Text>
                     <h2>Our Newsletter</h2>
-                    <p>
-                        Tamen quem nulla quae legam multos aute sint culpa legam
-                        noster magna
-                    </p>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
                 </Text>
                 <SubcribeForm>
                     <form>
