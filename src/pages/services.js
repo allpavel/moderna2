@@ -15,11 +15,11 @@ const ServicesPage = () => {
     return (
         <Layout>
             <Wrapper>
-                <Breadcrumbs />
-                {/* <Services />
+                <Breadcrumbs page="Services" />
+                <Services />
                 <WhyUs />
                 <ServicesDetails />
-                <Pricing /> */}
+                <Pricing />
             </Wrapper>
         </Layout>
     );

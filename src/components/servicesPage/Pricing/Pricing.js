@@ -5,11 +5,19 @@ import { BsCheck, BsX } from "react-icons/bs";
 const Wrapper = styled.section`
     padding: 3.75rem 0;
     background-color: var(--light-blue-color);
+
+    @media screen and (max-width: 575px) {
+        padding: 3rem 0 2rem;
+    }
 `;
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Title = styled.article`
@@ -50,6 +58,10 @@ const Title = styled.article`
     p {
         margin: 0;
         line-height: 1.5rem;
+    }
+
+    @media screen and (max-width: 575px) {
+        padding-bottom: 0;
     }
 `;
 
@@ -120,6 +132,17 @@ const Card = styled.article`
     &:nth-child(2) {
         z-index: 10;
         margin: -2rem -0.3rem 0 -0.3rem;
+    }
+
+    @media screen and (max-width: 575px) {
+        &:nth-child(2) {
+            z-index: 10;
+            margin: 0 0 1.875rem;
+        }
+
+        ul {
+            padding-left: 0;
+        }
     }
 `;
 

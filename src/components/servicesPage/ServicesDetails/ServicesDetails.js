@@ -5,6 +5,10 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Wrapper = styled.section`
     padding: 3.75rem 0 0.625rem;
+
+    @media screen and (max-width: 575px) {
+        padding: 3rem 0 2rem;
+    }
 `;
 
 const Container = styled.div`
@@ -13,6 +17,10 @@ const Container = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Item = styled.div`
@@ -21,6 +29,10 @@ const Item = styled.div`
     width: 47%;
     flex: 0 0 auto;
     padding: 0.5rem;
+
+    @media screen and (max-width: 575px) {
+        width: 100%;
+    }
 `;
 
 const Text = styled.div`
@@ -86,6 +98,10 @@ const Card = styled.article`
         ${Image} {
             transform: scale(1.05);
         }
+    }
+
+    @media screen and (max-width: 575px) {
+        margin-bottom: 2rem;
     }
 `;
 
