@@ -43,6 +43,14 @@ const Container = styled.div`
             color: #4fa6d5;
         }
     }
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
 `;
 
 const Breadcrumbs = ({ page }) => {

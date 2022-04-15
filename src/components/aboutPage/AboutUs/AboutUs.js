@@ -5,6 +5,10 @@ import { BsCheck2Circle } from "react-icons/bs";
 
 const Wrapper = styled.section`
     padding: 3.75rem 0;
+
+    @media screen and (max-width: 575px) {
+        padding: 3rem 0 2rem;
+    }
 `;
 
 const Container = styled.div`
@@ -12,6 +16,10 @@ const Container = styled.div`
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Image = styled.div`
@@ -52,6 +60,13 @@ const Text = styled.div`
             vertical-align: -0.2rem;
         }
     }
+
+    @media screen and (max-width: 575px) {
+        h3 {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+    }
 `;
 
 const AboutUs = () => {
@@ -59,48 +74,35 @@ const AboutUs = () => {
         <Wrapper>
             <Container>
                 <Image>
-                    <StaticImage
-                        src="../../../images/about.jpg"
-                        alt="out team image"
-                    />
+                    <StaticImage src="../../../images/about.jpg" alt="out team image" />
                 </Image>
                 <Text>
-                    <h3>
-                        Fill creature shall gathering under gathered open us us
-                        under first she'd together.
-                    </h3>
+                    <h3>Fill creature shall gathering under gathered open us us under first she'd together.</h3>
                     <p>
-                        Two likeness tree together, is deep midst let. Had had
-                        were in there. Let meat two his may fruitful fifth.
+                        Two likeness tree together, is deep midst let. Had had were in there. Let meat two his may
+                        fruitful fifth.
                     </p>
                     <ul>
                         <li>
                             <BsCheck2Circle />
-                            Earth were one heaven. Can't seed called replenish
-                            every female
+                            Earth were one heaven. Can't seed called replenish every female
                         </li>
                         <li>
                             <BsCheck2Circle />
-                            Bearing. Good also fruitful heaven. Don't thing
-                            whales given his
+                            Bearing. Good also fruitful heaven. Don't thing whales given his
                         </li>
                         <li>
                             <BsCheck2Circle />
-                            Him of is morning fruit. Sixth brought. I unto two.
-                            Brought midst fourth is them. Make seas one above
-                            seasons. Saying upon appear subdue stars. Green
-                            herb. Subdue. Signs i can't You're female fowl
-                            moveth.
+                            Him of is morning fruit. Sixth brought. I unto two. Brought midst fourth is them. Make seas
+                            one above seasons. Saying upon appear subdue stars. Green herb. Subdue. Signs i can't You're
+                            female fowl moveth.
                         </li>
                     </ul>
                     <p>
-                        Multiply creepeth the from greater days moveth, in set i
-                        our earth spirit fly. Under seasons. Day is a likeness
-                        made seas their fly fly fowl moved. Creeping fill living
-                        great is likeness be creepeth morning Man form good over
-                        there fruitful stars whose earth second place abundantly
-                        together beast divide. Kind in day open i him upon deep
-                        won't.
+                        Multiply creepeth the from greater days moveth, in set i our earth spirit fly. Under seasons.
+                        Day is a likeness made seas their fly fly fowl moved. Creeping fill living great is likeness be
+                        creepeth morning Man form good over there fruitful stars whose earth second place abundantly
+                        together beast divide. Kind in day open i him upon deep won't.
                     </p>
                 </Text>
             </Container>

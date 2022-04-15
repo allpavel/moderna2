@@ -1,19 +1,27 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
-import SwiperCore, { Pagination } from "swiper/core";
+import SwiperCore, { Pagination, Autoplay } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Autoplay]);
 
 const Wrapper = styled.section`
     padding: 3.75rem 0;
+
+    @media screen and (max-width: 575px) {
+        padding: 2rem 0 2rem;
+    }
 `;
 
 const Container = styled.section`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Title = styled.div`
@@ -84,6 +92,19 @@ const TestimonialCarousel = styled.div`
     .swiper-pagination-bullets {
         bottom: 2px;
     }
+
+    .swiper-pagination-bullet {
+        bottom: 2px;
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        opacity: 1;
+        border: 1px solid var(--hero-color);
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--hero-color);
+    }
 `;
 
 const Testimonials = () => {
@@ -93,60 +114,63 @@ const Testimonials = () => {
                 <Title>
                     <h2>Testimonials</h2>
                     <p>
-                        Rule years in after isn't fourth thing them likeness.
-                        Face you spirit air place fish i cattle for wherein
-                        isn't them. Shall image darkness and meat make together
-                        upon him don't form may his beginning fill void. Open
-                        creeping, image.
+                        Rule years in after isn't fourth thing them likeness. Face you spirit air place fish i cattle
+                        for wherein isn't them. Shall image darkness and meat make together upon him don't form may his
+                        beginning fill void. Open creeping, image.
                     </p>
                 </Title>
                 <TestimonialCarousel>
                     <Swiper
                         slidesPerView={1}
+                        autoplay={{ delay: 2000, disableOnInteraction: false }}
                         loop={true}
                         pagination={{ clickable: true }}
                         modules={{ Pagination }}
                     >
                         <SwiperSlide>
-                            <StaticImage
-                                src="../../../images/testimonials/testimonials-1.jpg"
-                                alt="CEO"
-                            />
+                            <StaticImage src="../../../images/testimonials/testimonials-1.jpg" alt="CEO" />
                             <h3>Saul Goodman</h3>
                             <p>CEO &#38; Founder</p>
                             <p>
-                                Sea also sea winged sea whales likeness them
-                                firmament. Form creeping without earth life i,
-                                that hath. Dry abundantly. You'll unto there
-                                great won't it winged lesser. Form signs sixth.
+                                Sea also sea winged sea whales likeness them firmament. Form creeping without earth life
+                                i, that hath. Dry abundantly. You'll unto there great won't it winged lesser. Form signs
+                                sixth.
                             </p>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <StaticImage
-                                src="../../../images/testimonials/testimonials-2.jpg"
-                                alt="CEO"
-                            />
-                            <h3>Saul Goodman</h3>
-                            <p>CEO &#38; Founder</p>
+                            <StaticImage src="../../../images/testimonials/testimonials-2.jpg" alt="CEO" />
+                            <h3>Sara Wilsson</h3>
+                            <p>Designer</p>
                             <p>
-                                Multiply every hath bring whose set is of. There
-                                living be Earth the place gathering fill lesser
-                                itself tree all and whose all sea dry won't fly
-                                fly unto moved.
+                                Multiply every hath bring whose set is of. There living be Earth the place gathering
+                                fill lesser itself tree all and whose all sea dry won't fly fly unto moved.
                             </p>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <StaticImage
-                                src="../../../images/testimonials/testimonials-3.jpg"
-                                alt="CEO"
-                            />
-                            <h3>Saul Goodman</h3>
-                            <p>CEO &#38; Founder</p>
+                            <StaticImage src="../../../images/testimonials/testimonials-3.jpg" alt="CEO" />
+                            <h3>Jena Carlise</h3>
+                            <p>Store Owner</p>
                             <p>
-                                He forth thing his fifth morning fifth beast god
-                                gathered. Second. Face subdue day made. The
-                                subdue years dry lights let cattle tree make,
-                                abundantly seasons Given be he place.
+                                He forth thing his fifth morning fifth beast god gathered. Second. Face subdue day made.
+                                The subdue years dry lights let cattle tree make, abundantly seasons Given be he place.
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <StaticImage src="../../../images/testimonials/testimonials-4.jpg" alt="CEO" />
+                            <h3>Mat Brandon</h3>
+                            <p>Freelancer</p>
+                            <p>
+                                May, won't fowl male Saying heaven female day. Night seed void two green without third
+                                was. After moveth one creepeth fly bearing were doesn't seed spirit.
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <StaticImage src="../../../images/testimonials/testimonials-5.jpg" alt="CEO" />
+                            <h3>John Larson</h3>
+                            <p>Software Developer</p>
+                            <p>
+                                Gathering waters greater bring there yielding doesn't. Have one fill signs subdue Whose
+                                place dominion from were of of Sixth female fourth you'll. Green.
                             </p>
                         </SwiperSlide>
                     </Swiper>
