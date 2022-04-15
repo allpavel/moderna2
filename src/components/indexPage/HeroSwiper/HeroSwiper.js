@@ -12,7 +12,7 @@ const HeroSwiper = () => {
             slidesPerView={1}
             loop={true}
             centeredSlides={true}
-            // autoplay={{ delay: 2000, disableOnInteraction: false }}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             navigation={true}
             modules={{ Navigation }}
         >

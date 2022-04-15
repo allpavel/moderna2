@@ -4,6 +4,10 @@ import styled from "styled-components";
 const Wrapper = styled.section`
     padding: 3.75rem 0;
     background-color: var(--light-blue-color);
+
+    @media screen and (max-width: 575px) {
+        padding: 3rem 0 2rem;
+    }
 `;
 
 const Container = styled.div`

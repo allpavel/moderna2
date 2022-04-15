@@ -23,7 +23,7 @@ export default function Home() {
                 <Services />
                 <WhyUs />
                 <Features />
-                {/* <ScrollToTop /> */}
+                <ScrollToTop />
             </Wrapper>
         </Layout>
     );

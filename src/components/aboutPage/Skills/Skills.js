@@ -3,11 +3,19 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
     padding: 3.75rem 0;
+
+    @media screen and (max-width: 575px) {
+        padding: 3rem 0 2rem;
+    }
 `;
 
 const Container = styled.section`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
+    }
 `;
 
 const Title = styled.div`
@@ -102,6 +110,12 @@ const ProgressBar = styled.div`
         float: right;
         margin-right: 1.25rem;
     }
+
+    @media screen and (max-width: 575px) {
+        span {
+            font-size: 0.8rem;
+        }
+    }
 `;
 
 const Skills = () => {
@@ -111,11 +125,9 @@ const Skills = () => {
                 <Title>
                     <h2>Our Skills</h2>
                     <p>
-                        Given said dry. Sea. Of which their two set he, seas
-                        cattle him seas female bring good set after divided
-                        yielding one. Sixth be you're night likeness. Gathered
-                        cattle tree subdue blessed male seed. Won't doesn't
-                        cattle was is midst.
+                        Given said dry. Sea. Of which their two set he, seas cattle him seas female bring good set after
+                        divided yielding one. Sixth be you're night likeness. Gathered cattle tree subdue blessed male
+                        seed. Won't doesn't cattle was is midst.
                     </p>
                 </Title>
                 <Content>
