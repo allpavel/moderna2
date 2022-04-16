@@ -33,7 +33,7 @@ const Container = styled.div`
     position: relative;
     height: 100%;
     padding: 0 0.75rem;
-    margin: 0 auto;
+    margin: 0 2rem;
 
     @media screen and (max-width: 1500px) {
         max-width: 1000px;
@@ -43,7 +43,11 @@ const Container = styled.div`
     }
 
     @media screen and (min-width: 769px) {
-        width: 100vw;
+        max-width: 100vw;
+    }
+
+    @media screen and (max-width: 575px) {
+        margin: 0 1rem;
     }
 `;
 

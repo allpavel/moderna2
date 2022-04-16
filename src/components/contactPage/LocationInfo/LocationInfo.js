@@ -4,9 +4,15 @@ import { BiMap, BiPhoneCall } from "react-icons/bi";
 import { BsEnvelope } from "react-icons/bs";
 
 const LocationInfo = styled.div`
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
+
+    @media screen and (max-width: 575px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
 `;
 
 const InfoBox = styled.article`
@@ -34,6 +40,17 @@ const InfoBox = styled.article`
     p {
         margin: 0;
         line-height: 1.5rem;
+    }
+
+    @media screen and (max-width: 575px) {
+        :first-child {
+            grid-column: 1 / 2;
+        }
+
+        :nth-child(2) {
+            margin-right: 0rem;
+            margin-bottom: 2rem;
+        }
     }
 `;
 

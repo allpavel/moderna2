@@ -21,6 +21,12 @@ const Wrapper = styled.form`
             border: 1px solid var(--main-color);
         }
     }
+
+    @media screen and (max-width: 575px) {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
 `;
 
 const Contacts = styled.div`
@@ -29,12 +35,18 @@ const Contacts = styled.div`
     flex-wrap: wrap;
     max-width: 100%;
     height: auto;
+    margin: 0 0.5rem 0.5rem;
     div {
         display: flex;
         flex-direction: column;
         width: calc(50% - 2rem);
         margin-bottom: 1rem;
-        padding: 0 0.5rem 0.5rem;
+    }
+    @media screen and (max-width: 575px) {
+        flex-direction: column;
+        div {
+            width: 100%;
+        }
     }
 `;
 
@@ -60,6 +72,10 @@ const TextArea = styled.div`
         &:focus {
             border: 1px solid var(--main-color);
         }
+    }
+
+    @media screen and (max-width: 575px) {
+        height: 9rem;
     }
 `;
 
