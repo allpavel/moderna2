@@ -12,7 +12,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 2rem;
 
     h2 {
         margin: 0;
