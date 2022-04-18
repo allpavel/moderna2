@@ -136,7 +136,7 @@ const Card = styled.article`
 
     @media screen and (max-width: 575px) {
         &:nth-child(2) {
-            z-index: 10;
+            z-index: 0;
             margin: 0 0 1.875rem;
         }
 
