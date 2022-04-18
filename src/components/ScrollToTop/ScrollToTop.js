@@ -4,14 +4,14 @@ import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 const Wrapper = styled.div`
     position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+    right: 1rem;
+    bottom: 1rem;
     cursor: pointer;
     z-index: 1000;
-    visibility: ${({ isVisible }) => isVisible ? "visible" : "hidden"};
-    opacity: ${({ isVisible }) => isVisible ? "1" : "0"};
+    visibility: ${({ isVisible }) => (isVisible ? "visible" : "hidden")};
+    opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
     transition: all 0.4s ease;
-    
+
     svg {
         height: 3rem;
         width: 3rem;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     }
 
     :hover {
-        opacity: .7;
+        opacity: 0.7;
     }
 `;
 

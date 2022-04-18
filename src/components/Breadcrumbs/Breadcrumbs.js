@@ -46,9 +46,15 @@ const Container = styled.div`
 
     @media screen and (max-width: 575px) {
         margin: 0 1rem;
+        flex-direction: column;
+        align-items: initial;
 
         h2 {
             font-size: 1.5rem;
+        }
+
+        ol {
+            padding-left: 0;
         }
     }
 `;

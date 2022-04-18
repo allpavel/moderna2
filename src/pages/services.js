@@ -6,6 +6,7 @@ import Layout from "../components/Layout/Layout";
 import WhyUs from "../components/WhyUs/WhyUs";
 import ServicesDetails from "../components/servicesPage/ServicesDetails/ServicesDetails";
 import Pricing from "../components/servicesPage/Pricing/Pricing";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
@@ -20,6 +21,7 @@ const ServicesPage = () => {
                 <WhyUs />
                 <ServicesDetails />
                 <Pricing />
+                <ScrollToTop />
             </Wrapper>
         </Layout>
     );
