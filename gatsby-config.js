@@ -1,7 +1,24 @@
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
-  plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-  ],
-}
+    siteMetadata: {
+        title: "Moderna website",
+        description: "Moderna with Strapi",
+        author: "Pavel Alloyarov",
+    },
+    plugins: [
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
+            resolve: "gatsby-source-strapi",
+            options: {
+                apiURL: process.env.STRAPI_API_URL,
+                accessToken: process.env.STRAPI_TOKEN,
+                collectionTypes: ["team"],
+            },
+        },
+    ],
+};
