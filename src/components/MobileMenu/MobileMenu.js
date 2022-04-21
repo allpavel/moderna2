@@ -59,10 +59,6 @@ const Wrapper = styled.nav`
     }
 `;
 
-const Dropdown = styled.div``;
-
-const Arrow = styled.div``;
-
 const MobileMenu = ({ isOpen }) => {
     return (
         <Wrapper isOpen={isOpen}>
