@@ -30,12 +30,10 @@ const ScrollToTop = () => {
         if (window.pageYOffset > 200) {
             setIsVisible(true);
         } else {
-            console.log("scroll");
             setIsVisible(false);
         }
     };
     const scrollToTop = () => {
-        console.log(isVisible);
         window.scrollTo({
             top: 0,
             behavior: "smooth",

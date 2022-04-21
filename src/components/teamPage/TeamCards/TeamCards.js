@@ -1,7 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
+import { v4 as uuidv4 } from "uuid";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import TeamSocialMedia, { SocialMedia } from "../SocialMedia/SocialMedia";
+
+const query = graphql`
+    {
+        allStrapiTeam {
+            edges {
+                node {
+                    Name
+                    Description
+                    Position
+                    Photo {
+                        localFile {
+                            childImageSharp {
+                                gatsbyImageData
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
 
 const Wrapper = styled.section`
     padding: 3.75rem 0;
@@ -59,73 +82,27 @@ const CardImage = styled.div`
 `;
 
 const TeamCards = () => {
+    const data = useStaticQuery(query);
+    const teamMembers = data.allStrapiTeam.edges;
     return (
         <Wrapper>
             <Container>
-                <Card>
-                    <CardImage>
-                        <StaticImage src="../../../images/team/team-1.jpg" alt="team-1" />
-                        <TeamSocialMedia />
-                    </CardImage>
-                    <Text>
-                        <h2>Walter White</h2>
-                        <span>Chief Executive Officer</span>
-                        <p>
-                            Given divide moved image there make. Own them land. Face. Lesser bearing male creature
-                            Fruitful very. Days first great over dominion said creature Night third. Called for given
-                            forth very years one there void him. Over winged to, after after yielding him she'd sixth
-                            lesser for make appear bring herb.
-                        </p>
-                    </Text>
-                </Card>
-                <Card>
-                    <CardImage>
-                        <StaticImage src="../../../images/team/team-2.jpg" alt="team-2" />
-                        <TeamSocialMedia />
-                    </CardImage>
-                    <Text>
-                        <h2>Sarah Johnson</h2>
-                        <span>Product Manager</span>
-                        <p>
-                            Itself together without heaven abundantly, earth is winged creeping creepeth. Doesn't second
-                            was thing in male greater appear female i. Fill over divided. Doesn't beginning You're
-                            yielding darkness moved bearing their fruit also cattle a second fruit god own, made heaven
-                            divide moveth image stars it fourth, made. So darkness.
-                        </p>
-                    </Text>
-                </Card>
-                <Card>
-                    <CardImage>
-                        <StaticImage src="../../../images/team/team-3.jpg" alt="team-3" />
-                        <TeamSocialMedia />
-                    </CardImage>
-                    <Text>
-                        <h2>William Anderson</h2>
-                        <span>CTO</span>
-                        <p>
-                            Without fourth upon was together him winged thing divide behold which night, the thing.
-                            Divided whose firmament kind, rule herb living firmament good fish forth beast for made.
-                            Moveth set. Appear great. Creature under. Made beast heaven stars meat can't. Day A kind
-                            brought third open. Rule creeping yielding air.
-                        </p>
-                    </Text>
-                </Card>
-                <Card>
-                    <CardImage>
-                        <StaticImage src="../../../images/team/team-4.jpg" alt="team-4" />
-                        <TeamSocialMedia />
-                    </CardImage>
-                    <Text>
-                        <h2>Amanda Jepson</h2>
-                        <span>Accountant</span>
-                        <p>
-                            Moved sea lights. Which, of thing and, dominion very. Dry third also said kind, make in hath
-                            bearing. One greater Night divided saying they're life dry beginning make without kind
-                            fourth be. Open it living bearing to darkness. All third saying and over whales gathering
-                            likeness seas man open, fowl.
-                        </p>
-                    </Text>
-                </Card>
+                {teamMembers.map(member => {
+                    const imageItem = getImage(member.node.Photo.localFile);
+                    return (
+                        <Card key={uuidv4()}>
+                            <CardImage>
+                                <GatsbyImage image={imageItem} alt={`image of ${member.node.Name}`} />
+                                <TeamSocialMedia />
+                            </CardImage>
+                            <Text>
+                                <h2>{member.node.Name}</h2>
+                                <span>{member.node.Position}</span>
+                                <p>{member.node.Description}</p>
+                            </Text>
+                        </Card>
+                    );
+                })}
             </Container>
         </Wrapper>
     );

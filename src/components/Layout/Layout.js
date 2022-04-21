@@ -1,5 +1,5 @@
 import React from "react";
-import { createGlobalStyle, keyframes } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import Roboto from "../../fonts/Roboto.woff2";
 import RobotoLight from "../../fonts/Roboto-Light.woff2";
 import Header from "../Header/Header";
