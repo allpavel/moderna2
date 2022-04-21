@@ -12,7 +12,8 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 2rem;
+    margin: 0 auto;
+    padding: 0 1rem;
 
     h2 {
         margin: 0;
@@ -46,6 +47,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 575px) {
         margin: 0 1rem;
+        padding: 0 0.75rem;
         flex-direction: column;
         align-items: initial;
 

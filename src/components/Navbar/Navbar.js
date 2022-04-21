@@ -110,7 +110,7 @@ const Dropdown = styled.li`
         left: 100%;
 
         @media screen and (max-width: 1400px) {
-            left: -100%;
+            left: -130%;
         }
     }
 `;
