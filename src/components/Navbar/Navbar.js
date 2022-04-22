@@ -110,7 +110,7 @@ const Dropdown = styled.li`
         left: 100%;
 
         @media screen and (max-width: 1400px) {
-            left: -100%;
+            left: -130%;
         }
     }
 `;
@@ -130,16 +130,24 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/services">Services</Link>
+                    <Link to="/services" activeClassName="active">
+                        Services
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/portfolio">Portfolio</Link>
+                    <Link to="/portfolio" activeClassName="active">
+                        Portfolio
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/team">Team</Link>
+                    <Link to="/team" activeClassName="active">
+                        Team
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog" activeClassName="active">
+                        Blog
+                    </Link>
                 </li>
                 <Dropdown>
                     <a href="#">
