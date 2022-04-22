@@ -54,6 +54,7 @@ const Title = styled.article`
 const Item = styled.article`
     max-width: var(--max-width-desktop);
     margin: 3rem auto 5rem;
+    padding: 0 2rem;
     display: grid;
     gap: 2rem;
 

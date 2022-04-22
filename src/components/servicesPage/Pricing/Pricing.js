@@ -130,7 +130,7 @@ const Card = styled.article`
     }
 
     &:nth-child(2) {
-        z-index: 10;
+        z-index: 1;
         margin: -2rem -0.3rem 0 -0.3rem;
     }
 

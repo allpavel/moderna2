@@ -30,6 +30,7 @@ const Wrapper = styled.section`
         content: "";
         background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)),
             url(${HeroImage}) center top no-repeat;
+        background-size: cover;
         position: absolute;
         top: 0;
         left: 50%;

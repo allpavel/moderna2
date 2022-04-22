@@ -32,8 +32,8 @@ const Container = styled.div`
     justify-content: space-between;
     position: relative;
     height: 100%;
-    padding: 0 0.75rem;
-    margin: 0 2rem;
+    padding: 0 1rem;
+    margin: 0 auto;
 
     @media screen and (max-width: 1500px) {
         max-width: 1000px;
@@ -42,7 +42,7 @@ const Container = styled.div`
         max-width: 900px;
     }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (max-width: 769px) {
         max-width: 100vw;
     }
 
