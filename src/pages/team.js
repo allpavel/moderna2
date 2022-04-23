@@ -14,7 +14,7 @@ const Team = () => {
         <Layout>
             <Wrapper>
                 <Breadcrumbs page="Our Team" />
-                <TeamCards />
+                {/* <TeamCards /> */}
                 <ScrollToTop />
             </Wrapper>
         </Layout>
