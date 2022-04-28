@@ -19,7 +19,10 @@ const InfoBox = styled.article`
     text-align: center;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-    padding: 1.25rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     :first-child {
         grid-column: 1 / 3;
