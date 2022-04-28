@@ -68,18 +68,20 @@ const ImageContainer = styled.div`
     width: 30%;
     position: relative;
 
-    .gatsby-image-wrapper picture {
+    .gatsby-image-wrapper {
         background: #1e4356;
+    }
+
+    .gatsby-image-wrapper picture {
         overflow: hidden;
     }
 
     .gatsby-image-wrapper picture img {
-        transition: all 0.4s ease;
+        transition: all 0.4s linear;
     }
 
     :hover .gatsby-image-wrapper picture img {
         opacity: 0.5 !important;
-        filter: brightness(60%);
         transform: scale(1.1);
     }
 

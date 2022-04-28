@@ -36,21 +36,54 @@ const FiltersList = styled.ul`
 `;
 
 const Filters = () => {
-    const [active, setActive] = useState(false);
+    const [all, setAll] = useState(false);
+    const [app, setApp] = useState(false);
+    const [card, setCard] = useState(false);
+    const [web, setWeb] = useState(false);
 
-    const toggleActive = () => {
-        setActive(prev => !prev);
+    const toggleAll = () => {
+        setAll(prev => !prev);
+        setApp(false);
+        setCard(false);
+        setWeb(false);
+    };
+
+    const toggleApp = () => {
+        setApp(prev => !prev);
+        setAll(false);
+        setCard(false);
+        setWeb(false);
+    };
+
+    const toggleCard = () => {
+        setCard(prev => !prev);
+        setApp(false);
+        setAll(false);
+        setWeb(false);
+    };
+
+    const toggleWeb = () => {
+        setWeb(prev => !prev);
+        setApp(false);
+        setAll(false);
+        setCard(false);
     };
 
     return (
         <Container>
             <FiltersList>
-                <FiltersListItem active={active} onClick={toggleActive}>
+                <FiltersListItem active={all} onClick={toggleAll}>
                     All
                 </FiltersListItem>
-                <FiltersListItem>App</FiltersListItem>
-                <FiltersListItem>Card</FiltersListItem>
-                <FiltersListItem>Web</FiltersListItem>
+                <FiltersListItem active={app} onClick={toggleApp}>
+                    App
+                </FiltersListItem>
+                <FiltersListItem active={card} onClick={toggleCard}>
+                    Card
+                </FiltersListItem>
+                <FiltersListItem active={web} onClick={toggleWeb}>
+                    Web
+                </FiltersListItem>
             </FiltersList>
         </Container>
     );
