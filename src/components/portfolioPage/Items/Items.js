@@ -104,7 +104,7 @@ const Items = () => {
     return (
         <Container>
             {images.map(item => {
-                const imageItem = getImage(item.image[0].localFile);
+                const imageItem = getImage(item.image.localFile);
                 return (
                     <ImageContainer key={uuidv4()}>
                         <GatsbyImage image={imageItem} alt="" />

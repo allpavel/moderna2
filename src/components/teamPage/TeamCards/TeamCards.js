@@ -10,10 +10,10 @@ const query = graphql`
         allStrapiTeam {
             edges {
                 node {
-                    Name
-                    Description
-                    Position
-                    Photo {
+                    name
+                    description
+                    position
+                    photo {
                         localFile {
                             childImageSharp {
                                 gatsbyImageData
@@ -88,17 +88,17 @@ const TeamCards = () => {
         <Wrapper>
             <Container>
                 {teamMembers.map(member => {
-                    const imageItem = getImage(member.node.Photo.localFile);
+                    const imageItem = getImage(member.node.photo.localFile);
                     return (
                         <Card key={uuidv4()}>
                             <CardImage>
-                                <GatsbyImage image={imageItem} alt={`image of ${member.node.Name}`} />
+                                <GatsbyImage image={imageItem} alt={`image of ${member.node.name}`} />
                                 <TeamSocialMedia />
                             </CardImage>
                             <Text>
-                                <h2>{member.node.Name}</h2>
-                                <span>{member.node.Position}</span>
-                                <p>{member.node.Description}</p>
+                                <h2>{member.node.name}</h2>
+                                <span>{member.node.position}</span>
+                                <p>{member.node.description}</p>
                             </Text>
                         </Card>
                     );
