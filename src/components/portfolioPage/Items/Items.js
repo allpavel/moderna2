@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import { v4 as uuidv4 } from "uuid";
@@ -9,6 +10,7 @@ const query = graphql`
     {
         allStrapiPortfolio {
             nodes {
+                title
                 image {
                     localFile {
                         childImageSharp {
@@ -111,7 +113,9 @@ const Items = () => {
                         <Info>
                             <h2>App</h2>
                             <BiPlus />
-                            <BiLink />
+                            <Link to={item.title}>
+                                <BiLink />
+                            </Link>
                         </Info>
                     </ImageContainer>
                 );
