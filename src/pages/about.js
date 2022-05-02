@@ -7,6 +7,7 @@ import Skills from "../components/aboutPage/Skills/Skills.js";
 import Testimonials from "../components/aboutPage/Testimonials/Testimonials.js";
 import Layout from "../components/Layout/Layout.js";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop.js";
+import { Link } from "gatsby";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
