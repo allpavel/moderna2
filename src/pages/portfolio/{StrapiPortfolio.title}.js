@@ -32,13 +32,17 @@ const Wrapper = styled.main`
 
 const Container = styled.section`
     max-width: var(--max-width-desktop);
-    margin: 1rem auto;
+    margin: 5rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+    @media screen and (max-width: 992px) {
+        margin: 2rem auto;
+    }
 
     @media screen and (max-width: 575px) {
-        margin: 0 1rem;
+        margin: 1rem;
     }
 `;
 
@@ -78,6 +82,10 @@ const ProjectInformation = styled.div`
         padding-bottom: 1rem;
         list-style: none;
     }
+
+    @media screen and (max-width: 575px) {
+        padding: 1rem;
+    }
 `;
 
 const Description = styled.div``;
@@ -108,11 +116,21 @@ const PortfolioItemTemplate = ({
                         <ProjectInformation>
                             <h2>Project Information</h2>
                             <ul>
-                                <li>Title: {title[0].toUpperCase() + title.slice(1)}</li>
-                                <li>Category: {category}</li>
-                                <li>Client: {client}</li>
-                                <li>Project date: {date}</li>
-                                <li>Project URL: {url}</li>
+                                <li>
+                                    <b>Title</b>: {title[0].toUpperCase() + title.slice(1)}
+                                </li>
+                                <li>
+                                    <b>Category</b>: {category}
+                                </li>
+                                <li>
+                                    <b>Client</b>: {client}
+                                </li>
+                                <li>
+                                    <b>Project date</b>: {date}
+                                </li>
+                                <li>
+                                    <b>Project URL</b>: {url}
+                                </li>
                             </ul>
                         </ProjectInformation>
                         <Description>

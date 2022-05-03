@@ -27,13 +27,14 @@ const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
     padding: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
 
     @media screen and (max-width: 575px) {
         padding: 0;
-        margin: 0 1rem;
+        margin: 0;
+        gap: 0;
     }
 `;
 
@@ -67,7 +68,6 @@ const Info = styled.div`
 
 const ImageContainer = styled.div`
     padding: 0.5rem;
-    width: 30%;
     position: relative;
 
     .gatsby-image-wrapper {
@@ -95,14 +95,14 @@ const ImageContainer = styled.div`
     }
 
     @media screen and (max-width: 575px) {
-        margin-bottom: 1rem;
-        padding: 0;
+        padding: 1rem;
     }
 `;
 
 const Items = () => {
     const data = useStaticQuery(query);
     const images = data.allStrapiPortfolio.nodes;
+    console.count("Items");
     return (
         <Container>
             {images.map(item => {
@@ -116,6 +116,10 @@ const Items = () => {
                             <Link to={item.title}>
                                 <BiLink />
                             </Link>
+
+                            {/* <a href={`portfolio/${item.title}`}>
+                                <BiLink />
+                            </a> */}
                         </Info>
                     </ImageContainer>
                 );
