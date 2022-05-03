@@ -12,6 +12,7 @@ const Wrapper = styled.section`
 `;
 
 const Portfolio = () => {
+    console.count("Portfolio");
     return (
         <Wrapper>
             <Filters />
