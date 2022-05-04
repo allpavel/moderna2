@@ -4,10 +4,10 @@ import { BiFingerprint, BiGift } from "react-icons/bi";
 
 const Wrapper = styled.section`
     background-color: var(--light-blue-color);
-    padding: 3.75rem 0;
+    padding: 3.75rem 1rem;
 
     @media screen and (max-width: 575px) {
-        padding: 2rem 0;
+        padding: 2rem 1rem;
     }
 `;
 
@@ -19,7 +19,7 @@ const Content = styled.div`
     display: grid;
     grid-template-columns: 50% 50%;
 
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 910px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
     }

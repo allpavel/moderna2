@@ -7,20 +7,17 @@ const Wrapper = styled.section`
     padding: 3.75rem 0 0.625rem;
 
     @media screen and (max-width: 575px) {
-        padding: 3rem 0 2rem;
+        padding: 2rem 0 2rem;
     }
 `;
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
-    @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-    }
 `;
 
 const Item = styled.div`
@@ -137,7 +134,7 @@ const ServicesDetails = () => {
                             <p>
                                 Us there hath you isn't waters he second made void yielding sea. They're land them Under
                                 whales open lights. May spirit. Void moving, years fowl two thing unto. Abundantly,
-                                firmament place creepeth divide. Lesser above deep abundantly brought after midst.
+                                firmament place creepeth divide. Lesser above deep.
                             </p>
                             <a href="#">
                                 <BsArrowRight /> Read More

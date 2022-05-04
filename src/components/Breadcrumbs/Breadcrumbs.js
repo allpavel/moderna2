@@ -46,8 +46,6 @@ const Container = styled.div`
     }
 
     @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-        padding: 0 0.75rem;
         flex-direction: column;
         align-items: initial;
 

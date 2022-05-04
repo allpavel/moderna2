@@ -18,10 +18,7 @@ const Wrapper = styled.section`
 const Container = styled.section`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
-
-    @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-    }
+    padding: 0 1rem;
 `;
 
 const Title = styled.div`

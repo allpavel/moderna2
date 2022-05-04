@@ -69,8 +69,6 @@ const Filters = () => {
         setCard(false);
     };
 
-    console.count("Filters");
-
     return (
         <Container>
             <FiltersList>

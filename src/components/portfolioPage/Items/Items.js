@@ -102,7 +102,6 @@ const ImageContainer = styled.div`
 const Items = () => {
     const data = useStaticQuery(query);
     const images = data.allStrapiPortfolio.nodes;
-    console.count("Items");
     return (
         <Container>
             {images.map(item => {
@@ -116,10 +115,6 @@ const Items = () => {
                             <Link to={item.title}>
                                 <BiLink />
                             </Link>
-
-                            {/* <a href={`portfolio/${item.title}`}>
-                                <BiLink />
-                            </a> */}
                         </Info>
                     </ImageContainer>
                 );

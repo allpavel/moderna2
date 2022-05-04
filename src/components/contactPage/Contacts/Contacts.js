@@ -14,13 +14,13 @@ const Wrapper = styled.section`
 const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+    padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 
-    @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-        gap: 0;
+    @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr;
     }
 `;
 

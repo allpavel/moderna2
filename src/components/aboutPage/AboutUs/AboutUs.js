@@ -7,23 +7,29 @@ const Wrapper = styled.section`
     padding: 3.75rem 0;
 
     @media screen and (max-width: 575px) {
-        padding: 3rem 0 2rem;
+        padding: 2rem 0 2rem;
     }
 `;
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+    padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: 50% 50%;
 
     @media screen and (max-width: 575px) {
-        margin: 0 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
     }
 `;
 
 const Image = styled.div`
-    padding: 0 10px;
+    padding-left: 0 10px;
+
+    @media screen and (max-width: 575px) {
+        padding-left: 0;
+    }
 `;
 
 const Text = styled.div`
@@ -62,6 +68,7 @@ const Text = styled.div`
     }
 
     @media screen and (max-width: 575px) {
+        padding: 0;
         h3 {
             margin-top: 1rem;
             margin-bottom: 0;
