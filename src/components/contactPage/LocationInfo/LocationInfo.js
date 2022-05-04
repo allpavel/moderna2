@@ -45,6 +45,10 @@ const InfoBox = styled.article`
         line-height: 1.5rem;
     }
 
+    @media screen and (max-width: 992px) {
+        padding: 3rem 0;
+    }
+
     @media screen and (max-width: 575px) {
         :first-child {
             grid-column: 1 / 2;

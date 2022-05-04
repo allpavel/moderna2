@@ -7,17 +7,14 @@ const Wrapper = styled.section`
     background-color: var(--light-blue-color);
 
     @media screen and (max-width: 575px) {
-        padding: 3rem 0 2rem;
+        padding: 2rem 0 2rem;
     }
 `;
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
-
-    @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-    }
+    padding: 0 1rem;
 `;
 
 const Title = styled.article`
@@ -66,18 +63,22 @@ const Title = styled.article`
 `;
 
 const PricingContainer = styled.div`
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     padding-top: 2.5rem;
+
+    @media screen and (max-width: 920px) {
+        max-width: 600px;
+        flex-direction: column;
+    }
 `;
 
 const Card = styled.article`
-    flex: 1 1 auto;
     text-align: center;
     background-color: #fff;
     box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
     padding: 2.5rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 2rem;
 
     h3 {
         font-size: 1.75rem;
@@ -134,14 +135,27 @@ const Card = styled.article`
         margin: -2rem -0.3rem 0 -0.3rem;
     }
 
-    @media screen and (max-width: 575px) {
-        &:nth-child(2) {
+    @media screen and (max-width: 920px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        :nth-child(2) {
             z-index: 0;
-            margin: 0 0 1.875rem;
+            margin: 0 2rem 1.875rem;
         }
 
         ul {
             padding-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 0;
+        margin-right: 0;
+
+        :nth-child(2) {
+            z-index: 0;
+            margin: 0 0 1.875rem;
         }
     }
 `;

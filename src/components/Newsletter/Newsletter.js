@@ -15,12 +15,9 @@ const Wrapper = styled.article`
 const Container = styled.div`
     max-width: var(--max-width-desktop);
     margin: 0 auto;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-
-    @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-    }
 `;
 
 const Text = styled.div`

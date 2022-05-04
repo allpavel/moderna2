@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { useLocation } from "@reach/router";
 import { MdMenu, MdClose } from "react-icons/md";
@@ -34,21 +34,6 @@ const Container = styled.div`
     height: 100%;
     padding: 0 1rem;
     margin: 0 auto;
-
-    @media screen and (max-width: 1500px) {
-        max-width: 1000px;
-    }
-    @media screen and (max-width: 1280px) {
-        max-width: 900px;
-    }
-
-    @media screen and (max-width: 769px) {
-        max-width: 100vw;
-    }
-
-    @media screen and (max-width: 575px) {
-        margin: 0 1rem;
-    }
 `;
 
 const MenuIcon = styled(MdMenu)`
@@ -80,15 +65,19 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
-    const changeHeaderBackground = () => {
-        if (window.scrollY >= 80) {
-            setHeader(true);
-        } else {
-            setHeader(false);
-        }
-    };
+    useEffect(() => {
+        const changeHeaderBackground = () => {
+            if (window.scrollY >= 80) {
+                setHeader(true);
+            } else {
+                setHeader(false);
+            }
+        };
 
-    window.addEventListener("scroll", changeHeaderBackground);
+        window.addEventListener("scroll", changeHeaderBackground);
+
+        return () => window.removeEventListener("scroll", changeHeaderBackground);
+    }, [header]);
 
     const handleMobileMenuClick = () => {
         setIsOpen(prev => !prev);
