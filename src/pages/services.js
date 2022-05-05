@@ -7,16 +7,19 @@ import WhyUs from "../components/WhyUs/WhyUs";
 import ServicesDetails from "../components/servicesPage/ServicesDetails/ServicesDetails";
 import Pricing from "../components/servicesPage/Pricing/Pricing";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import useGetPath from "../hooks/useGetPath";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
 `;
 
 const ServicesPage = () => {
+    const path = useGetPath();
+
     return (
         <Layout>
             <Wrapper>
-                <Breadcrumbs page="Services" />
+                <Breadcrumbs path={path} />
                 <Services />
                 <WhyUs />
                 <ServicesDetails />

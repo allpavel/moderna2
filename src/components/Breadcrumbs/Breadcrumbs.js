@@ -1,6 +1,7 @@
-import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+import { v4 as uuidv4 } from "uuid";
+import { Link } from "gatsby";
 
 const Wrapper = styled.section`
     padding: 1rem 0;
@@ -28,15 +29,21 @@ const Container = styled.div`
 
         li {
             letter-spacing: 1px;
-        }
-
-        li:last-child {
             padding-left: 10px;
         }
 
-        li:last-child::before {
+        li::before {
             content: "/";
             padding-right: 10px;
+        }
+
+        li:first-child {
+            padding-left: 0;
+        }
+
+        li:first-child::before {
+            content: "";
+            padding-right: 0;
         }
 
         li a {
@@ -59,16 +66,37 @@ const Container = styled.div`
     }
 `;
 
-const Breadcrumbs = ({ page }) => {
+const Breadcrumbs = ({ path }) => {
+    if (path.length === 1) {
+        return (
+            <Wrapper>
+                <Container>
+                    <h2>{path[0]}</h2>
+                    <ol>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>{path[0]}</li>
+                    </ol>
+                </Container>
+            </Wrapper>
+        );
+    }
+
     return (
         <Wrapper>
             <Container>
-                <h2>{page}</h2>
+                <h2>{path[0]}</h2>
                 <ol>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
-                    <li>{page}</li>
+                    {path.slice(0, path.length - 1).map(link => (
+                        <li key={uuidv4()}>
+                            <Link to={`/${link.toLowerCase()}`}>{link}</Link>
+                        </li>
+                    ))}
+                    <li>{path[path.length - 1]}</li>
                 </ol>
             </Container>
         </Wrapper>

@@ -7,17 +7,18 @@ import Skills from "../components/aboutPage/Skills/Skills.js";
 import Testimonials from "../components/aboutPage/Testimonials/Testimonials.js";
 import Layout from "../components/Layout/Layout.js";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop.js";
-import { Link } from "gatsby";
+import useGetPath from "../hooks/useGetPath.js";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
 `;
 
 const About = () => {
+    const path = useGetPath();
     return (
         <Layout>
             <Wrapper>
-                <Breadcrumbs page="About Us" />
+                <Breadcrumbs path={path} />
                 <AboutUs />
                 <Facts />
                 <Skills />
