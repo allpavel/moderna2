@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import useGetPath from "../../hooks/useGetPath";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Layout from "../../components/Layout/Layout";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
     query getSinglePortfolioItem($title: String) {
@@ -104,10 +105,13 @@ const PortfolioItemTemplate = ({
     },
 }) => {
     const imageItem = getImage(localFile);
+
+    const path = useGetPath();
+
     return (
         <Layout>
             <Wrapper>
-                <Breadcrumbs page={<Link to="/portfolio">Portfolio</Link>} />
+                <Breadcrumbs path={path} />
                 <Container>
                     <Image>
                         <GatsbyImage image={imageItem} alt={`image of ${title}`} />
