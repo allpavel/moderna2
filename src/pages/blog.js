@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import useGetPath from "../hooks/useGetPath";
 import SEO from "../components/SEO/SEO";
+import BlogList from "../components/blogListPage/BlogList/BlogList";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
@@ -18,7 +19,7 @@ const PortfolioPage = () => {
             <SEO title="Blog" description="This is the Blog Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
-                <h1>Blog page</h1>
+                <BlogList />
                 <ScrollToTop />
             </Wrapper>
         </Layout>

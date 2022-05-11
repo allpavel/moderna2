@@ -7,7 +7,7 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import SEO from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 
-const Wrapper = styled.section`
+const Wrapper = styled.main`
     margin-top: 3.75rem;
 `;
 
