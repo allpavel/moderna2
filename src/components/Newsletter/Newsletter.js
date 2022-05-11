@@ -84,7 +84,7 @@ const Newsletter = () => {
                 </Text>
                 <SubcribeForm>
                     <form>
-                        <input type="email" name="email" />
+                        <input aria-label="Enter your e-mail" type="email" name="email" />
                         <input type="submit" value="Subscribe" />
                     </form>
                 </SubcribeForm>

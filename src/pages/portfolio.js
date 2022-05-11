@@ -4,6 +4,7 @@ import Layout from "../components/Layout/Layout";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import Portfolio from "../components/portfolioPage/Portfolio/Portfolio";
+import SEO from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 
 const Wrapper = styled.main`
@@ -14,13 +15,14 @@ const PortfolioPage = () => {
     const path = useGetPath();
 
     return (
-        <Wrapper>
-            <Layout>
+        <Layout>
+            <SEO title="Portfolio" description="This is The Portfolio Page" />
+            <Wrapper>
                 <Breadcrumbs path={path} />
                 <Portfolio />
                 <ScrollToTop />
-            </Layout>
-        </Wrapper>
+            </Wrapper>
+        </Layout>
     );
 };
 

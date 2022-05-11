@@ -6,6 +6,7 @@ import Services from "../components/Services/Services";
 import WhyUs from "../components/WhyUs/WhyUs";
 import Features from "../components/indexPage/Features/Features";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import SEO from "../components/SEO/SEO";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
@@ -18,6 +19,7 @@ const Wrapper = styled.main`
 export default function Home() {
     return (
         <Layout>
+            <SEO title="Home" description="This is The Home Page" />
             <Hero />
             <Wrapper>
                 <Services />
