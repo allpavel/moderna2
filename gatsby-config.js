@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
     siteMetadata: {
-        title: "Moderna website",
+        title: "Moderna",
         description: "Moderna with Strapi",
         author: "Pavel Alloyarov",
     },

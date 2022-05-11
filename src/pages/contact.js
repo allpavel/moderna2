@@ -4,6 +4,7 @@ import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import Contacts from "../components/contactPage/Contacts/Contacts";
 import Layout from "../components/Layout/Layout";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import SEO from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 
 const Wrapper = styled.section`
@@ -14,6 +15,7 @@ const Contact = () => {
     const path = useGetPath();
     return (
         <Layout>
+            <SEO title="Contact" description="this is a description" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <Contacts />

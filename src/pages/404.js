@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout/Layout";
+import SEO from "../components/SEO/SEO";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -55,6 +56,7 @@ const Container = styled.div`
 const ErrorPage = () => {
     return (
         <Layout>
+            <SEO title="Error" description="This is The Error Page" />
             <Wrapper>
                 <Container>
                     <Text>

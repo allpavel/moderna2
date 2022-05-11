@@ -6,6 +6,7 @@ import useGetPath from "../../hooks/useGetPath";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Layout from "../../components/Layout/Layout";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import SEO from "../../components/SEO/SEO";
 
 export const query = graphql`
     query getSinglePortfolioItem($title: String) {
@@ -94,11 +95,11 @@ const Description = styled.div``;
 const PortfolioItemTemplate = ({
     data: {
         strapiPortfolio: {
-            title,
+            title: itemTitle,
             url,
             category,
             date,
-            description,
+            description: itemDescription,
             client,
             image: { localFile },
         },
@@ -108,20 +109,23 @@ const PortfolioItemTemplate = ({
 
     const path = useGetPath();
 
+    const metaTitle = itemTitle[0].toUpperCase() + itemTitle.slice(1);
+
     return (
         <Layout>
+            <SEO title={metaTitle} description="This is a portfolio item page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <Container>
                     <Image>
-                        <GatsbyImage image={imageItem} alt={`image of ${title}`} />
+                        <GatsbyImage image={imageItem} alt={`image of ${metaTitle}`} />
                     </Image>
                     <Text>
                         <ProjectInformation>
                             <h2>Project Information</h2>
                             <ul>
                                 <li>
-                                    <b>Title</b>: {title[0].toUpperCase() + title.slice(1)}
+                                    <b>Title</b>: {metaTitle}
                                 </li>
                                 <li>
                                     <b>Category</b>: {category}
@@ -139,7 +143,7 @@ const PortfolioItemTemplate = ({
                         </ProjectInformation>
                         <Description>
                             <h2>Description:</h2>
-                            <p>{description}</p>
+                            <p>{itemDescription}</p>
                         </Description>
                     </Text>
                     <ScrollToTop />
