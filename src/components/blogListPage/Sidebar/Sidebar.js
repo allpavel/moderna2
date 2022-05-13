@@ -5,6 +5,10 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Wrapper = styled.section`
     margin-left: 2rem;
+
+    @media screen and (max-width: 992px) {
+        margin-left: 0;
+    }
 `;
 
 const Container = styled.div`
