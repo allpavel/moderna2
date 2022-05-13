@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
-import { v4 as uuidv4 } from "uuid";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsPerson, BsClock } from "react-icons/bs";
 import Sidebar from "../Sidebar/Sidebar";
@@ -10,10 +9,12 @@ const query = graphql`
     {
         allStrapiBlog {
             nodes {
+                id
                 title
                 postAuthor
                 description
                 data
+                slug
                 images {
                     localFile {
                         childImageSharp {
@@ -91,12 +92,12 @@ const Info = styled.ul`
 
 const Button = styled.div`
     text-align: right;
-    button {
+    a {
         background-color: #77adca;
         color: #fff;
-        border: 0;
         padding: 0.8rem 1.8rem;
         transition: all 0.4s ease;
+        text-decoration: none;
 
         :hover {
             cursor: pointer;
@@ -116,7 +117,7 @@ const BlogList = () => {
                     {posts.map(post => {
                         const postImage = getImage(post.images[0].localFile);
                         return (
-                            <BlogListItem key={uuidv4()}>
+                            <BlogListItem key={post.id}>
                                 <GatsbyImage image={postImage} alt="" />
                                 <h2>{post.title}</h2>
                                 <Info>
@@ -129,7 +130,7 @@ const BlogList = () => {
                                 </Info>
                                 <p>{post.description}</p>
                                 <Button>
-                                    <button>Read More</button>
+                                    <Link to={post.slug}>Read More</Link>
                                 </Button>
                             </BlogListItem>
                         );
