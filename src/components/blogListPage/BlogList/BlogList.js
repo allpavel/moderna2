@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { v4 as uuidv4 } from "uuid";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsPerson, BsClock } from "react-icons/bs";
-import BlogPost from "../BlogPost/BlogPost";
 import Sidebar from "../Sidebar/Sidebar";
 
 const query = graphql`
@@ -90,17 +89,19 @@ const Info = styled.ul`
     }
 `;
 
-const Button = styled.button`
-    background-color: #77adca;
-    color: #fff;
-    border: 0;
-    padding: 0.8rem 1.8rem;
-    transition: all 0.4s ease;
-    float: right;
+const Button = styled.div`
+    text-align: right;
+    button {
+        background-color: #77adca;
+        color: #fff;
+        border: 0;
+        padding: 0.8rem 1.8rem;
+        transition: all 0.4s ease;
 
-    :hover {
-        cursor: pointer;
-        background-color: var(--main-color);
+        :hover {
+            cursor: pointer;
+            background-color: var(--main-color);
+        }
     }
 `;
 
@@ -111,25 +112,29 @@ const BlogList = () => {
     return (
         <Wrapper>
             <Container>
-                {posts.map(post => {
-                    const postImage = getImage(post.images[0].localFile);
-                    return (
-                        <BlogListItem key={uuidv4()}>
-                            <GatsbyImage image={postImage} alt="" />
-                            <h2>{post.title}</h2>
-                            <Info>
-                                <li>
-                                    <BsPerson /> {post.postAuthor}
-                                </li>
-                                <li>
-                                    <BsClock /> {post.data}
-                                </li>
-                            </Info>
-                            <p>{post.description}</p>
-                            <Button>Read More</Button>
-                        </BlogListItem>
-                    );
-                })}
+                <div>
+                    {posts.map(post => {
+                        const postImage = getImage(post.images[0].localFile);
+                        return (
+                            <BlogListItem key={uuidv4()}>
+                                <GatsbyImage image={postImage} alt="" />
+                                <h2>{post.title}</h2>
+                                <Info>
+                                    <li>
+                                        <BsPerson /> {post.postAuthor}
+                                    </li>
+                                    <li>
+                                        <BsClock /> {post.data}
+                                    </li>
+                                </Info>
+                                <p>{post.description}</p>
+                                <Button>
+                                    <button>Read More</button>
+                                </Button>
+                            </BlogListItem>
+                        );
+                    })}
+                </div>
                 <Sidebar />
             </Container>
         </Wrapper>
