@@ -109,7 +109,7 @@ const Post = styled.div`
     }
 `;
 
-const Tags = styled.div`
+export const Tags = styled.div`
     ul {
         padding-left: 0;
         margin-bottom: 0;

@@ -32,6 +32,10 @@ const query = graphql`
 
 const Wrapper = styled.section`
     padding: 2.5rem 0;
+
+    @media screen and (max-width: 575px) {
+        padding: 1rem 0 1rem;
+    }
 `;
 
 const Container = styled.div`
@@ -68,7 +72,7 @@ const BlogListItem = styled.article`
     }
 `;
 
-const Info = styled.ul`
+export const Info = styled.ul`
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -92,6 +96,7 @@ const Info = styled.ul`
 
 const Button = styled.div`
     text-align: right;
+    margin-top: 2rem;
     a {
         background-color: #77adca;
         color: #fff;
