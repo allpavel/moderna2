@@ -7,7 +7,7 @@ const Wrapper = styled.section`
     padding: 3.75rem 0;
 
     @media screen and (max-width: 575px) {
-        padding: 3rem 0 2rem;
+        padding: 1rem 0 1rem;
     }
 `;
 

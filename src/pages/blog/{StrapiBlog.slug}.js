@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { BsPerson, BsClock } from "react-icons/bs";
+import { Info } from "../../components/blogListPage/BlogList/BlogList";
+import { Tags } from "../../components/blogListPage/Sidebar/Sidebar";
 import SEO from "../../components/SEO/SEO";
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/blogListPage/Sidebar/Sidebar";
@@ -11,8 +15,8 @@ export const query = graphql`
     query getSingleBlog($slug: String) {
         strapiBlog(slug: { eq: $slug }) {
             title
-            description
             data
+            postAuthor
             images {
                 localFile {
                     childImageSharp {
@@ -21,6 +25,7 @@ export const query = graphql`
                 }
             }
             tags {
+                post
                 tags
             }
         }
@@ -45,8 +50,22 @@ const Container = styled.div`
 `;
 
 const Post = styled.article`
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+
     h2 {
         margin-top: 0;
+    }
+
+    .gatsby-image-wrapper {
+        max-height: 440px;
+        overflow: hidden;
+        margin: -1rem -1rem 1rem;
+    }
+
+    p:nth-of-type(3) {
+        margin-bottom: 2rem;
     }
 `;
 
@@ -54,14 +73,16 @@ const BlogPost = ({
     data: {
         strapiBlog: {
             title: itemTitle,
-            description: itemDescription,
             data,
-            images: { localFile },
-            tags: { tags },
+            postAuthor,
+            images: [{ localFile: localFile1 }, { localFile: localFile2 }],
+            tags: { post, tags },
         },
     },
 }) => {
     const path = useGetPath();
+    const postImage1 = getImage(localFile1);
+    const postImage2 = getImage(localFile2);
 
     return (
         <Layout>
@@ -70,8 +91,29 @@ const BlogPost = ({
                 <Breadcrumbs path={path} />
                 <Container>
                     <Post>
+                        <GatsbyImage image={postImage1} alt="" />
                         <h2>{itemTitle}</h2>
-                        <p>{itemDescription}</p>
+                        <Info>
+                            <li>
+                                <BsPerson /> {postAuthor}
+                            </li>
+                            <li>
+                                <BsClock /> {data}
+                            </li>
+                        </Info>
+                        <p>{post[0]}</p>
+                        <p>{post[1]}</p>
+                        <p>{post[2]}</p>
+                        <GatsbyImage image={postImage2} alt="" />
+                        <p>{post[3]}</p>
+                        <p>{post[4]}</p>
+                        <Tags>
+                            <ul>
+                                {tags.map((tag, index) => (
+                                    <li key={index}>{tag}</li>
+                                ))}
+                            </ul>
+                        </Tags>
                     </Post>
                     <Sidebar />
                 </Container>
