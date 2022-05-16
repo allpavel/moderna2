@@ -139,8 +139,8 @@ const Sidebar = () => {
                 <h2>Search</h2>
                 <SearchBar>
                     <form>
-                        <input type="text" />
-                        <button>
+                        <input type="text" id="search" aria-label="Search" />
+                        <button aria-label="Search Button">
                             <BsSearch />
                         </button>
                     </form>
