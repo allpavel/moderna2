@@ -6,12 +6,13 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import useGetPath from "../hooks/useGetPath";
 import SEO from "../components/SEO/SEO";
 import BlogList from "../components/blogListPage/BlogList/BlogList";
+import AnotherBlogList from "../components/blogListPage/BlogList/AnotherBlogList";
 
 const Wrapper = styled.main`
     margin-top: 3.75rem;
 `;
 
-const PortfolioPage = () => {
+const BlogPage = () => {
     const path = useGetPath();
 
     return (
@@ -19,6 +20,7 @@ const PortfolioPage = () => {
             <SEO title="Blog" description="This is the Blog Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
+                <AnotherBlogList />
                 <BlogList />
                 <ScrollToTop />
             </Wrapper>
@@ -26,4 +28,4 @@ const PortfolioPage = () => {
     );
 };
 
-export default PortfolioPage;
+export default BlogPage;
