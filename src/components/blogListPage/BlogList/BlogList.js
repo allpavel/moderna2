@@ -1,34 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsPerson, BsClock } from "react-icons/bs";
 import Sidebar from "../Sidebar/Sidebar";
-
-const query = graphql`
-    {
-        allStrapiBlog {
-            nodes {
-                id
-                title
-                postAuthor
-                description
-                data
-                slug
-                images {
-                    localFile {
-                        childImageSharp {
-                            gatsbyImageData
-                        }
-                    }
-                }
-                tags {
-                    tags
-                }
-            }
-        }
-    }
-`;
 
 const Wrapper = styled.section`
     padding: 2.5rem 0;
@@ -111,31 +86,32 @@ const Button = styled.div`
     }
 `;
 
-const BlogList = () => {
-    const data = useStaticQuery(query);
-    const posts = data.allStrapiBlog.nodes;
+const BlogList = ({ data }) => {
+    const posts = data.allStrapiBlog.edges;
+
+    console.log(posts);
 
     return (
         <Wrapper>
             <Container>
                 <div>
                     {posts.map(post => {
-                        const postImage = getImage(post.images[0].localFile);
+                        const postImage = getImage(post.node.images[0].localFile);
                         return (
-                            <BlogListItem key={post.id}>
+                            <BlogListItem key={post.node.id}>
                                 <GatsbyImage image={postImage} alt="" />
-                                <h2>{post.title}</h2>
+                                <h2>{post.node.title}</h2>
                                 <Info>
                                     <li>
-                                        <BsPerson /> {post.postAuthor}
+                                        <BsPerson /> {post.node.postAuthor}
                                     </li>
                                     <li>
-                                        <BsClock /> {post.data}
+                                        <BsClock /> {post.node.data}
                                     </li>
                                 </Info>
-                                <p>{post.description}</p>
+                                <p>{post.node.description}</p>
                                 <Button>
-                                    <Link to={post.slug}>Read More</Link>
+                                    <Link to={`/blog/${post.node.slug}`}>Read More</Link>
                                 </Button>
                             </BlogListItem>
                         );
