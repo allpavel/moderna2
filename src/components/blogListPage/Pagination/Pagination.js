@@ -47,7 +47,7 @@ const Pagination = ({ pages }) => {
         <Wrapper>
             <PaginationList>
                 {pageNumbers.map((number, i) => (
-                    <Link to={number === 1 ? `/blog` : `/blog/${number}`} activeClassName="active">
+                    <Link to={number === 1 ? `/blog` : `/blog/${number}`} activeClassName="active" key={i}>
                         {number}
                     </Link>
                 ))}
