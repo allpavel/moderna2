@@ -16,6 +16,7 @@ const Container = styled.div`
     top: 5rem;
     position: sticky;
     padding: 1rem 2rem;
+    margin-bottom: 2.5rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
     h2 {
