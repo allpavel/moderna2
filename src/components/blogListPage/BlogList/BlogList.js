@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsPerson, BsClock } from "react-icons/bs";
 import Sidebar from "../Sidebar/Sidebar";
+import Pagination from "../Pagination/Pagination";
 
 const Wrapper = styled.section`
     padding: 2.5rem 0;
@@ -29,7 +30,7 @@ const Container = styled.div`
 const BlogListItem = styled.article`
     padding: 1.875rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 
     .gatsby-image-wrapper {
         max-height: 440px;
@@ -88,8 +89,7 @@ const Button = styled.div`
 
 const BlogList = ({ data }) => {
     const posts = data.allStrapiBlog.edges;
-
-    console.log(posts);
+    const pages = data.allStrapiBlog.pageInfo;
 
     return (
         <Wrapper>
@@ -119,6 +119,7 @@ const BlogList = ({ data }) => {
                 </div>
                 <Sidebar />
             </Container>
+            <Pagination pages={pages} />
         </Wrapper>
     );
 };

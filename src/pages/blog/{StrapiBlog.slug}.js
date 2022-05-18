@@ -52,7 +52,7 @@ const Container = styled.div`
 const Post = styled.article`
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 
     h2 {
         margin-top: 0;
