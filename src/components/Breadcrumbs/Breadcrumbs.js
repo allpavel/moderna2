@@ -67,7 +67,9 @@ const Container = styled.div`
 `;
 
 const Breadcrumbs = ({ path }) => {
-    if (path.length === 1) {
+    console.log(path);
+    console.log(path[path.length - 1]);
+    if (path.length === 1 || Number.isInteger(+path[path.length - 1])) {
         return (
             <Wrapper>
                 <Container>
