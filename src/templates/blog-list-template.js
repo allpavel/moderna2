@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import useGetPath from "../hooks/useGetPath";
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/SEO/SEO";
 import BlogList from "../components/blogListPage/BlogList/BlogList";
 
 export const listQuery = graphql`
@@ -50,7 +50,7 @@ const BlogPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEO title="Blog" description="This is the Blog Page" />
+            <Seo title="Blog" description="This is the Blog Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <BlogList data={data} />

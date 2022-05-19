@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import TeamCards from "../components/teamPage/TeamCards/TeamCards";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 
 const Wrapper = styled.main`
@@ -16,7 +16,7 @@ const Team = () => {
 
     return (
         <Layout>
-            <SEO title="Team" description="This is The Team Page" />
+            <Seo title="Team" description="This is The Team Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <TeamCards />

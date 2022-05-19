@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsPerson, BsClock } from "react-icons/bs";
 import { Info } from "../../components/blogListPage/BlogList/BlogList";
 import { Tags } from "../../components/blogListPage/Sidebar/Sidebar";
-import SEO from "../../components/SEO/SEO";
+import Seo from "../../components/SEO/SEO";
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/blogListPage/Sidebar/Sidebar";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
@@ -86,7 +86,7 @@ const BlogPost = ({
 
     return (
         <Layout>
-            <SEO title="" description="This is a Blog Post Page" />
+            <Seo title={itemTitle} description="This is a Blog Post Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <Container>

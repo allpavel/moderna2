@@ -7,7 +7,7 @@ import Skills from "../components/aboutPage/Skills/Skills.js";
 import Testimonials from "../components/aboutPage/Testimonials/Testimonials.js";
 import Layout from "../components/Layout/Layout.js";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop.js";
-import SEO from "../components/SEO/SEO.js";
+import Seo from "../components/SEO/SEO.js";
 import useGetPath from "../hooks/useGetPath.js";
 
 const Wrapper = styled.main`
@@ -18,7 +18,7 @@ const About = () => {
     const path = useGetPath();
     return (
         <Layout>
-            <SEO title="About" description="This is The About Page" />
+            <Seo title="About" description="This is The About Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <AboutUs />
