@@ -6,7 +6,7 @@ import useGetPath from "../../hooks/useGetPath";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Layout from "../../components/Layout/Layout";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
-import SEO from "../../components/SEO/SEO";
+import Seo from "../../components/SEO/SEO";
 
 export const query = graphql`
     query getSinglePortfolioItem($title: String) {
@@ -113,7 +113,7 @@ const PortfolioItemTemplate = ({
 
     return (
         <Layout>
-            <SEO title={metaTitle} description="This is a portfolio item page" />
+            <Seo title={metaTitle} description="This is a portfolio item page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <Container>

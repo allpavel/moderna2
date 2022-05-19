@@ -7,7 +7,7 @@ import WhyUs from "../components/WhyUs/WhyUs";
 import ServicesDetails from "../components/servicesPage/ServicesDetails/ServicesDetails";
 import Pricing from "../components/servicesPage/Pricing/Pricing";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 
 const Wrapper = styled.main`
@@ -19,7 +19,7 @@ const ServicesPage = () => {
 
     return (
         <Layout>
-            <SEO title="Services" description="This is The Services Page" />
+            <Seo title="Services" description="This is The Services Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <Services />

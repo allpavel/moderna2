@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import Portfolio from "../components/portfolioPage/Portfolio/Portfolio";
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 
 const Wrapper = styled.main`
@@ -16,7 +16,7 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
-            <SEO title="Portfolio" description="This is The Portfolio Page" />
+            <Seo title="Portfolio" description="This is The Portfolio Page" />
             <Wrapper>
                 <Breadcrumbs path={path} />
                 <Portfolio />
