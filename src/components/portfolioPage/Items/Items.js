@@ -1,27 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import { graphql, useStaticQuery } from "gatsby";
-import { v4 as uuidv4 } from "uuid";
 import { BiPlus, BiLink } from "react-icons/bi";
-
-const query = graphql`
-    {
-        allStrapiPortfolio {
-            nodes {
-                title
-                image {
-                    localFile {
-                        childImageSharp {
-                            gatsbyImageData
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
@@ -99,15 +80,13 @@ const ImageContainer = styled.div`
     }
 `;
 
-const Items = () => {
-    const data = useStaticQuery(query);
-    const images = data.allStrapiPortfolio.nodes;
+const Items = React.memo(({ data }) => {
     return (
         <Container>
-            {images.map(item => {
+            {data.map(item => {
                 const imageItem = getImage(item.image.localFile);
                 return (
-                    <ImageContainer key={uuidv4()}>
+                    <ImageContainer key={item.id}>
                         <GatsbyImage image={imageItem} alt="" />
                         <Info>
                             <h2>App</h2>
@@ -121,6 +100,6 @@ const Items = () => {
             })}
         </Container>
     );
-};
+});
 
 export default Items;
