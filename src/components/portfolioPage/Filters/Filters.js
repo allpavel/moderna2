@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -31,58 +31,49 @@ const FiltersListItem = styled.li`
 
 const FiltersList = styled.ul`
     display: flex;
+    flex-wrap: wrap;
     padding-left: 0;
     margin: 0 0 2rem;
 `;
 
-const Filters = () => {
-    const [all, setAll] = useState(false);
-    const [app, setApp] = useState(false);
-    const [card, setCard] = useState(false);
-    const [web, setWeb] = useState(false);
-
+const Filters = ({ filter, setFilter }) => {
     const toggleAll = () => {
-        setAll(prev => !prev);
-        setApp(false);
-        setCard(false);
-        setWeb(false);
+        setFilter("all");
     };
 
-    const toggleApp = () => {
-        setApp(prev => !prev);
-        setAll(false);
-        setCard(false);
-        setWeb(false);
+    const toggleHome = () => {
+        setFilter("home");
     };
 
-    const toggleCard = () => {
-        setCard(prev => !prev);
-        setApp(false);
-        setAll(false);
-        setWeb(false);
+    const toggleCosmetics = () => {
+        setFilter("cosmetics");
     };
 
     const toggleWeb = () => {
-        setWeb(prev => !prev);
-        setApp(false);
-        setAll(false);
-        setCard(false);
+        setFilter("web");
+    };
+
+    const toggleFood = () => {
+        setFilter("food");
     };
 
     return (
         <Container>
             <FiltersList>
-                <FiltersListItem active={all} onClick={toggleAll}>
+                <FiltersListItem active={filter === "all"} onClick={toggleAll}>
                     All
                 </FiltersListItem>
-                <FiltersListItem active={app} onClick={toggleApp}>
-                    App
+                <FiltersListItem active={filter === "home"} onClick={toggleHome}>
+                    Home
                 </FiltersListItem>
-                <FiltersListItem active={card} onClick={toggleCard}>
-                    Card
+                <FiltersListItem active={filter === "cosmetics"} onClick={toggleCosmetics}>
+                    Cosmetics
                 </FiltersListItem>
-                <FiltersListItem active={web} onClick={toggleWeb}>
+                <FiltersListItem active={filter === "web"} onClick={toggleWeb}>
                     Web
+                </FiltersListItem>
+                <FiltersListItem active={filter === "food"} onClick={toggleFood}>
+                    Food
                 </FiltersListItem>
             </FiltersList>
         </Container>

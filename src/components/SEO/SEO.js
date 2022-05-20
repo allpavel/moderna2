@@ -21,8 +21,6 @@ const SEO = ({ title, description }) => {
     } = useStaticQuery(query);
     const metaDescription = description || siteMetadata.description;
 
-    console.log(title);
-
     return (
         <Helmet
             htmlAttributes={{ lang: "en" }}
