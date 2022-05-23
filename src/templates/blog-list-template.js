@@ -6,7 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import useGetPath from "../hooks/useGetPath";
 import Seo from "../components/SEO/SEO";
-import BlogList from "../components/blogListPage/BlogList/BlogList";
+import BlogList from "../components/pages/blogListPage/BlogList/BlogList";
 
 export const listQuery = graphql`
     query BlogListQuery($skip: Int, $limit: Int) {

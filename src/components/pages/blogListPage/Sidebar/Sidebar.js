@@ -173,21 +173,21 @@ const Sidebar = () => {
                 <RecentPosts>
                     <Post>
                         <div>
-                            <StaticImage src="../../../images/blog/blog-recent-1.jpg" alt="" />
+                            <StaticImage src="../../../../images/blog/blog-recent-1.jpg" alt="" />
                         </div>
                         <h3>Nihil blanditiis at in nihil autem</h3>
                         <time dateTime="2020-01-10">Jan 10, 2020</time>
                     </Post>
                     <Post>
                         <div>
-                            <StaticImage src="../../../images/blog/blog-recent-2.jpg" alt="" />
+                            <StaticImage src="../../../../images/blog/blog-recent-2.jpg" alt="" />
                         </div>
                         <h3>Nihil blanditiis at in nihil autem</h3>
                         <time dateTime="2020-01-10">Jan 10, 2020</time>
                     </Post>
                     <Post>
                         <div>
-                            <StaticImage src="../../../images/blog/blog-recent-3.jpg" alt="" />
+                            <StaticImage src="../../../../images/blog/blog-recent-3.jpg" alt="" />
                         </div>
                         <h3>Nihil blanditiis at in nihil autem</h3>
                         <time dateTime="2020-01-10">Jan 10, 2020</time>

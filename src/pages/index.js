@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout/Layout";
-import Hero from "../components/indexPage/Hero/Hero";
+import Hero from "../components/pages/indexPage/Hero/Hero";
 import Services from "../components/Services/Services";
 import WhyUs from "../components/WhyUs/WhyUs";
-import Features from "../components/indexPage/Features/Features";
+import Features from "../components/pages/indexPage/Features/Features";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import Seo from "../components/SEO/SEO";
 

@@ -81,7 +81,7 @@ const AboutUs = () => {
         <Wrapper>
             <Container>
                 <Image>
-                    <StaticImage src="../../../images/about.jpg" alt="out team image" />
+                    <StaticImage src="../../../../images/about.jpg" alt="out team image" />
                 </Image>
                 <Text>
                     <h3>Fill creature shall gathering under gathered open us us under first she'd together.</h3>

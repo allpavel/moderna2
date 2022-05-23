@@ -182,7 +182,7 @@ const Features = () => {
                 </Title>
                 <Item>
                     <div>
-                        <StaticImage src="../../../images/features-1.svg" alt="" placeholder="tracedSVG" />
+                        <StaticImage src="../../../../images/features-1.svg" alt="" placeholder="tracedSVG" />
                     </div>
                     <Text>
                         <h3>Fruitful so which set two won't multiply</h3>
@@ -205,7 +205,7 @@ const Features = () => {
                 </Item>
                 <Item>
                     <div>
-                        <StaticImage src="../../../images/features-2.svg" alt="" placeholder="tracedSVG" />
+                        <StaticImage src="../../../../images/features-2.svg" alt="" placeholder="tracedSVG" />
                     </div>
                     <Text>
                         <h3>Greater whose fifth sixth very and may life.</h3>
@@ -224,7 +224,7 @@ const Features = () => {
                 </Item>
                 <Item>
                     <div>
-                        <StaticImage src="../../../images/features-3.svg" alt="" placeholder="tracedSVG" />
+                        <StaticImage src="../../../../images/features-3.svg" alt="" placeholder="tracedSVG" />
                     </div>
                     <Text>
                         <h3>Hath moveth greater don't fifth herb don't light</h3>
@@ -251,7 +251,7 @@ const Features = () => {
                 </Item>
                 <Item>
                     <div>
-                        <StaticImage src="../../../images/features-4.svg" alt="" placeholder="tracedSVG" />
+                        <StaticImage src="../../../../images/features-4.svg" alt="" placeholder="tracedSVG" />
                     </div>
                     <Text>
                         <h3>Saw dominion bearing without second likeness</h3>
