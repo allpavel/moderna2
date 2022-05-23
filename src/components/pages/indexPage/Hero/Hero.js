@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeroImage from "../../../images/hero-bg.webp";
+import HeroImage from "../../../../images/hero-bg.webp";
 import HeroSwiper from "../HeroSwiper/HeroSwiper";
 
 const Wrapper = styled.section`

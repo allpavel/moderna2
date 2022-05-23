@@ -109,7 +109,7 @@ const ServicesDetails = () => {
                 <Item>
                     <Card>
                         <Image>
-                            <StaticImage src="../../../images/service-details-1.jpg" alt="" />
+                            <StaticImage src="../../../../images/service-details-1.jpg" alt="" />
                         </Image>
                         <Text>
                             <h2>Our Mission</h2>
@@ -127,7 +127,7 @@ const ServicesDetails = () => {
                 <Item>
                     <Card>
                         <Image>
-                            <StaticImage src="../../../images/service-details-2.jpg" alt="" />
+                            <StaticImage src="../../../../images/service-details-2.jpg" alt="" />
                         </Image>
                         <Text>
                             <h2>Our Plan</h2>
@@ -145,7 +145,7 @@ const ServicesDetails = () => {
                 <Item>
                     <Card>
                         <Image>
-                            <StaticImage src="../../../images/service-details-3.jpg" alt="" />
+                            <StaticImage src="../../../../images/service-details-3.jpg" alt="" />
                         </Image>
                         <Text>
                             <h2>Our Vision</h2>
@@ -163,7 +163,7 @@ const ServicesDetails = () => {
                 <Item>
                     <Card>
                         <Image>
-                            <StaticImage src="../../../images/service-details-4.jpg" alt="" />
+                            <StaticImage src="../../../../images/service-details-4.jpg" alt="" />
                         </Image>
                         <Text>
                             <h2>Our Care</h2>

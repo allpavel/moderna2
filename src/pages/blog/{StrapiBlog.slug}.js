@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsPerson, BsClock } from "react-icons/bs";
-import { Info } from "../../components/blogListPage/BlogList/BlogList";
-import { Tags } from "../../components/blogListPage/Sidebar/Sidebar";
+import { Info } from "../../components/pages/blogListPage/BlogList/BlogList";
+import { Tags } from "../../components/pages/blogListPage/Sidebar/Sidebar";
 import Seo from "../../components/SEO/SEO";
 import Layout from "../../components/Layout/Layout";
-import Sidebar from "../../components/blogListPage/Sidebar/Sidebar";
+import Sidebar from "../../components/pages/blogListPage/Sidebar/Sidebar";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import useGetPath from "../../hooks/useGetPath";
 

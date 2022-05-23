@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 import Filters from "../Filters/Filters";
 import Items from "../Items/Items";
-import { useFilter } from "../../../hooks/useFilter";
+import { useFilter } from "../../../../hooks/useFilter";
 
 const query = graphql`
     {

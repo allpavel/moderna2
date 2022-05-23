@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Layout from "../components/Layout/Layout";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import Portfolio from "../components/portfolioPage/Portfolio/Portfolio";
+import Portfolio from "../components/pages/portfolioPage/Portfolio/Portfolio";
 import Seo from "../components/SEO/SEO";
 import useGetPath from "../hooks/useGetPath";
 

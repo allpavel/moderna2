@@ -125,7 +125,7 @@ const Testimonials = () => {
                         modules={{ Pagination }}
                     >
                         <SwiperSlide>
-                            <StaticImage src="../../../images/testimonials/testimonials-1.jpg" alt="CEO" />
+                            <StaticImage src="../../../../images/testimonials/testimonials-1.jpg" alt="CEO" />
                             <h3>Saul Goodman</h3>
                             <p>CEO &#38; Founder</p>
                             <p>
@@ -135,7 +135,7 @@ const Testimonials = () => {
                             </p>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <StaticImage src="../../../images/testimonials/testimonials-2.jpg" alt="CEO" />
+                            <StaticImage src="../../../../images/testimonials/testimonials-2.jpg" alt="CEO" />
                             <h3>Sara Wilsson</h3>
                             <p>Designer</p>
                             <p>
@@ -144,7 +144,7 @@ const Testimonials = () => {
                             </p>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <StaticImage src="../../../images/testimonials/testimonials-3.jpg" alt="CEO" />
+                            <StaticImage src="../../../../images/testimonials/testimonials-3.jpg" alt="CEO" />
                             <h3>Jena Carlise</h3>
                             <p>Store Owner</p>
                             <p>
@@ -153,7 +153,7 @@ const Testimonials = () => {
                             </p>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <StaticImage src="../../../images/testimonials/testimonials-4.jpg" alt="CEO" />
+                            <StaticImage src="../../../../images/testimonials/testimonials-4.jpg" alt="CEO" />
                             <h3>Mat Brandon</h3>
                             <p>Freelancer</p>
                             <p>
@@ -162,7 +162,7 @@ const Testimonials = () => {
                             </p>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <StaticImage src="../../../images/testimonials/testimonials-5.jpg" alt="CEO" />
+                            <StaticImage src="../../../../images/testimonials/testimonials-5.jpg" alt="CEO" />
                             <h3>John Larson</h3>
                             <p>Software Developer</p>
                             <p>
