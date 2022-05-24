@@ -111,7 +111,7 @@ const BlogList = ({ data }) => {
                                 </Info>
                                 <p>{post.node.description}</p>
                                 <Button>
-                                    <Link to={`/blog/${post.node.slug}`}>Read More</Link>
+                                    <Link to={`/blog/${post.node.slug}/`}>Read More</Link>
                                 </Button>
                             </BlogListItem>
                         );
