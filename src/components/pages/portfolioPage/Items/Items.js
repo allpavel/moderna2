@@ -80,7 +80,7 @@ const ImageContainer = styled.div`
     }
 `;
 
-const Items = React.memo(({ data }) => {
+const Items = ({ data }) => {
     return (
         <Container>
             {data.map(item => {
@@ -100,6 +100,6 @@ const Items = React.memo(({ data }) => {
             })}
         </Container>
     );
-});
+};
 
 export default Items;
