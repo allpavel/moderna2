@@ -125,27 +125,27 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/about" activeClassName="active">
+                    <Link to="/about/" activeClassName="active">
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link to="/services" activeClassName="active">
+                    <Link to="/services/" activeClassName="active">
                         Services
                     </Link>
                 </li>
                 <li>
-                    <Link to="/portfolio" activeClassName="active">
+                    <Link to="/portfolio/" activeClassName="active">
                         Portfolio
                     </Link>
                 </li>
                 <li>
-                    <Link to="/team" activeClassName="active">
+                    <Link to="/team/" activeClassName="active">
                         Team
                     </Link>
                 </li>
                 <li>
-                    <Link to="/blog" activeClassName="active">
+                    <Link to="/blog/" activeClassName="active">
                         Blog
                     </Link>
                 </li>
@@ -191,7 +191,7 @@ const Navbar = () => {
                     </ul>
                 </Dropdown>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact/">Contact</Link>
                 </li>
             </ul>
         </Wrapper>
