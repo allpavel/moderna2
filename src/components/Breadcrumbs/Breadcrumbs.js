@@ -93,7 +93,7 @@ const Breadcrumbs = ({ path }) => {
                     </li>
                     {path.slice(0, path.length - 1).map(link => (
                         <li key={uuidv4()}>
-                            <Link to={`/${link.toLowerCase()}`}>{link}</Link>
+                            <Link to={`/${link.toLowerCase()}/`}>{link}</Link>
                         </li>
                     ))}
                     <li>{path[path.length - 1]}</li>
