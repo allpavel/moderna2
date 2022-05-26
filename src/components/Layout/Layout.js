@@ -32,15 +32,10 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
         scroll-behavior: smooth;
-        overflow: hidden;
-        width: 100%;
+
     }
 
     body {
-        height: 100%;
-        position: fixed;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
         margin: 0;
         padding: 0;
         box-sizing: border-box;

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 const Wrapper = styled.nav`
     opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
-    height: ${({ isOpen }) => (isOpen ? "100vh" : "0")};
+    height: ${({ isOpen }) => (isOpen ? "100%" : "0")};
     display: flex;
     flex-direction: column;
     width: 100%;
