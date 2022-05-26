@@ -37,19 +37,17 @@ const Container = styled.section`
     margin: 5rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 
     @media screen and (max-width: 992px) {
-        margin: 2rem auto;
-    }
-
-    @media screen and (max-width: 575px) {
-        margin: 1rem;
+        grid-template-columns: 1fr;
+        margin: 1rem auto;
     }
 `;
 
 const Image = styled.div`
     padding-right: 1rem;
+    text-align: center;
 
     @media screen and (max-width: 992px) {
         padding-right: 0;
@@ -59,7 +57,7 @@ const Image = styled.div`
 const Text = styled.div`
     padding-left: 1rem;
 
-    @media screen and (max-width: 846px) {
+    @media screen and (max-width: 992px) {
         padding: 1rem 0;
     }
 `;
