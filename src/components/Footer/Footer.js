@@ -4,6 +4,7 @@ import FooterTop from "../FooterTop/FooterTop";
 import Newsletter from "../Newsletter/Newsletter";
 
 const Footer = () => {
+    console.log("footer");
     return (
         <footer>
             <Newsletter />
@@ -13,4 +14,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default React.memo(Footer);

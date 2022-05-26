@@ -60,9 +60,8 @@ const CloseIcon = styled(MdClose)`
     }
 `;
 
-const Header = () => {
+const Header = ({ isOpen, handleMobileMenuClick }) => {
     const [header, setHeader] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -78,10 +77,6 @@ const Header = () => {
 
         return () => window.removeEventListener("scroll", changeHeaderBackground);
     }, [header]);
-
-    const handleMobileMenuClick = () => {
-        setIsOpen(prev => !prev);
-    };
 
     return (
         <Wrapper header={header} location={location}>
