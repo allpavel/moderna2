@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     right: 1rem;
     bottom: 1rem;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 100;
     visibility: ${({ isVisible }) => (isVisible ? "visible" : "hidden")};
     opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
     transition: all 0.4s ease;
