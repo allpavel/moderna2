@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import Roboto from "../../fonts/Roboto.woff2";
 import RobotoLight from "../../fonts/Roboto-Light.woff2";
@@ -42,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Open Sans", sans-serif;
         max-width: 100%;
         color: #444;
+        overflow: ${({ isOpen }) => (isOpen ? "hidden" : "auto")};
     }
 
     ::after, ::before {
@@ -108,10 +109,16 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const Layout = ({ children }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleMobileMenuClick = () => {
+        setIsOpen(prev => !prev);
+    };
+
     return (
         <>
-            <GlobalStyles />
-            <Header />
+            <GlobalStyles isOpen={isOpen} />
+            <Header isOpen={isOpen} handleMobileMenuClick={handleMobileMenuClick} />
             {children}
             <Footer />
         </>
