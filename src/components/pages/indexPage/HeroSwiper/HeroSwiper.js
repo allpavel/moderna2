@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import SwiperCore, { Navigation, Autoplay } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
+import "./swiper-bundle.css";
 import "./HeroSwiper.css";
 
 SwiperCore.use([Navigation, Autoplay]);
