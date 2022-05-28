@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -118,9 +119,9 @@ const ServicesDetails = () => {
                                 earth heaven a. Saying. They're give very behold. Fruit fish winged a. Air two light.
                                 Day which beginning wherein. Open one moving appear likeness great He.
                             </p>
-                            <a href="#">
+                            <Link to="/service">
                                 <BsArrowRight /> Read More
-                            </a>
+                            </Link>
                         </Text>
                     </Card>
                 </Item>
@@ -136,9 +137,9 @@ const ServicesDetails = () => {
                                 whales open lights. May spirit. Void moving, years fowl two thing unto. Abundantly,
                                 firmament place creepeth divide. Lesser above deep.
                             </p>
-                            <a href="#">
+                            <Link to="/service">
                                 <BsArrowRight /> Read More
-                            </a>
+                            </Link>
                         </Text>
                     </Card>
                 </Item>
@@ -154,9 +155,9 @@ const ServicesDetails = () => {
                                 lesser face multiply isn't heaven. Man all gathering there years above have brought
                                 waters that from saying very. Living our. Bring. Them, isn't seasons seas fowl without.
                             </p>
-                            <a href="#">
+                            <Link to="/service">
                                 <BsArrowRight /> Read More
-                            </a>
+                            </Link>
                         </Text>
                     </Card>
                 </Item>
@@ -172,9 +173,9 @@ const ServicesDetails = () => {
                                 Them us gathered there meat gathering you male that unto every upon, under winged fourth
                                 their. Beast years firmament Meat forth have thing lights he.
                             </p>
-                            <a href="#">
+                            <Link to="/service">
                                 <BsArrowRight /> Read More
-                            </a>
+                            </Link>
                         </Text>
                     </Card>
                 </Item>

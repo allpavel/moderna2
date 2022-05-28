@@ -10,12 +10,14 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Roboto';
         src: url(${Roboto}) format('woff2');
         font-weight: 400;
+        font-display: swap;
     }
 
     @font-face {
         font-family: 'Roboto';
         src: url(${RobotoLight}) format('woff2');
         font-weight: 300;
+        font-display: swap;
     }
 
     :root {

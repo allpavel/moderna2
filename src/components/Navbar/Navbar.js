@@ -99,6 +99,10 @@ const Dropdown = styled.li`
     ul li ul {
         top: 0;
         left: calc(100% - 1.875rem);
+
+        @media screen and (max-width: 1400px) {
+            left: -100%;
+        }
     }
 
     ul li ul li {
@@ -150,43 +154,43 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <Dropdown>
-                    <a href="#">
+                    <Link to="/">
                         Dropdown <ChevronDown />
-                    </a>
+                    </Link>
                     <ul>
                         <li>
-                            <a href="#">Dropdown 1</a>
+                            <Link to="/">Dropdown 1</Link>
                         </li>
                         <Dropdown>
-                            <a href="#">
+                            <Link to="/" href="#">
                                 Dropdown 2 <ChevronRight />
-                            </a>
+                            </Link>
                             <ul>
                                 <li>
-                                    <a href="#">Deep Dropdown 1</a>
+                                    <Link to="/">Deep Dropdown 1</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Deep Dropdown 2</a>
+                                    <Link to="/">Deep Dropdown 2</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Deep Dropdown 3</a>
+                                    <Link to="/">Deep Dropdown 3</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Deep Dropdown 4</a>
+                                    <Link to="/">Deep Dropdown 4</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Deep Dropdown 5</a>
+                                    <Link to="/">Deep Dropdown 5</Link>
                                 </li>
                             </ul>
                         </Dropdown>
                         <li>
-                            <a href="#">Dropdown 3</a>
+                            <Link to="/">Dropdown 3</Link>
                         </li>
                         <li>
-                            <a href="#">Dropdown 4</a>
+                            <Link to="/">Dropdown 4</Link>
                         </li>
                         <li>
-                            <a href="#">Dropdown 5</a>
+                            <Link to="/">Dropdown 5</Link>
                         </li>
                     </ul>
                 </Dropdown>
