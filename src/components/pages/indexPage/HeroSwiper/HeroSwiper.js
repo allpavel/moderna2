@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import SwiperCore, { Navigation, Autoplay } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
@@ -23,7 +24,7 @@ const HeroSwiper = () => {
                     their. Hath i without days is. Creature winged likeness creature also spirit.Tree firmament let
                     seasons us night she'd may image gathered over great life male And. Dry great them yielding the
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/">Read More</Link>
             </SwiperSlide>
             <SwiperSlide>
                 <h2>Shall said image</h2>
@@ -32,7 +33,7 @@ const HeroSwiper = () => {
                     multiply wherein night midst she'd itself morning our good kind. Called behold multiply deep
                     abundantly creature grass given, land gathered fruit fifth
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/">Read More</Link>
             </SwiperSlide>
             <SwiperSlide>
                 <h2>Earth him fly green</h2>
@@ -41,7 +42,7 @@ const HeroSwiper = () => {
                     Saw you female Fifth may set him very saying. God is under and, set made over he given all waters
                     first face given
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/">Read More</Link>
             </SwiperSlide>
         </Swiper>
     );
