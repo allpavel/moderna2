@@ -62,7 +62,12 @@ const CloseIcon = styled(MdClose)`
 
 const Header = ({ isOpen, handleMobileMenuClick }) => {
     const [header, setHeader] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
+
+    const handleMobileMenuClick = () => {
+        setIsOpen(prev => !prev);
+    };
 
     useEffect(() => {
         const changeHeaderBackground = () => {
