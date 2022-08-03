@@ -44,7 +44,6 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Open Sans", sans-serif;
         max-width: 100%;
         color: #444;
-        overflow: ${({ isOpen }) => (isOpen ? "hidden" : "auto")};
     }
 
     ::after, ::before {
@@ -113,8 +112,8 @@ const GlobalStyles = createGlobalStyle`
 const Layout = ({ children }) => {
     return (
         <>
-            <GlobalStyles isOpen={isOpen} />
-            <Header isOpen={isOpen} handleMobileMenuClick={handleMobileMenuClick} />
+            <GlobalStyles />
+            <Header />
             {children}
             <Footer />
         </>

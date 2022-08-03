@@ -60,7 +60,7 @@ const CloseIcon = styled(MdClose)`
     }
 `;
 
-const Header = ({ isOpen, handleMobileMenuClick }) => {
+const Header = () => {
     const [header, setHeader] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
@@ -68,6 +68,14 @@ const Header = ({ isOpen, handleMobileMenuClick }) => {
     const handleMobileMenuClick = () => {
         setIsOpen(prev => !prev);
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [isOpen]);
 
     useEffect(() => {
         const changeHeaderBackground = () => {
