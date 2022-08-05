@@ -51,8 +51,7 @@ const PortfolioImageGallery = ({ imageIndex, isOpen, setIsOpen }) => {
     const {
         allImageSharp: { edges },
     } = useStaticQuery(query);
-    console.log(edges);
-    const images = edges.slice(0, 9).map(item => ({
+    const images = edges.slice(6, 15).map(item => ({
         original: item.node.original.src,
     }));
 
