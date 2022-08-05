@@ -38,6 +38,13 @@ const Wrapper = styled.section`
 
 const Container = styled.div`
     padding: 0 1rem;
+
+    .image-gallery-content.fullscreen {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 1rem;
+    }
 `;
 
 const PortfolioImageGallery = ({ imageIndex, isOpen, setIsOpen }) => {
