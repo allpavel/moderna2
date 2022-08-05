@@ -7,7 +7,7 @@ import { useFilter } from "../../../../hooks/useFilter";
 
 const query = graphql`
     {
-        allStrapiPortfolio {
+        allStrapiPortfolio(sort: { order: ASC, fields: image___localFile___url }) {
             nodes {
                 id
                 category
