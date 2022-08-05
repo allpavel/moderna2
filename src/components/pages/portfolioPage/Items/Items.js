@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { BiPlus, BiLink } from "react-icons/bi";
+import PortfolioImageGallery from "../ImageGallery/ImageGallery";
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
@@ -81,16 +82,26 @@ const ImageContainer = styled.div`
 `;
 
 const Items = ({ data }) => {
+    const [imageIndex, setImageIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpenGallery = index => {
+        setIsOpen(true);
+        setImageIndex(index);
+        document.body.style.overflow = "hidden";
+    };
+
     return (
         <Container>
-            {data.map(item => {
+            {isOpen && <PortfolioImageGallery imageIndex={imageIndex} isOpen={isOpen} setIsOpen={setIsOpen} />}
+            {data.map((item, index) => {
                 const imageItem = getImage(item.image.localFile);
                 return (
                     <ImageContainer key={item.id}>
                         <GatsbyImage image={imageItem} alt="" />
                         <Info>
                             <h2>App</h2>
-                            <BiPlus />
+                            <BiPlus onClick={() => handleOpenGallery(index)} />
                             <Link to={item.title}>
                                 <BiLink />
                             </Link>
