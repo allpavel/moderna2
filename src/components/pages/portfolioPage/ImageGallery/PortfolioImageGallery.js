@@ -1,23 +1,8 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import ImageGallery from "react-image-gallery";
 import styled from "styled-components";
 import "react-image-gallery/styles/css/image-gallery.css";
-
-const query = graphql`
-    {
-        allImageSharp(sort: { fields: original___src, order: ASC }) {
-            edges {
-                node {
-                    id
-                    original {
-                        src
-                    }
-                }
-            }
-        }
-    }
-`;
+import { getImage } from "gatsby-plugin-image";
 
 const Wrapper = styled.section`
     position: fixed;
@@ -47,13 +32,12 @@ const Container = styled.div`
     }
 `;
 
-const PortfolioImageGallery = ({ imageIndex, isOpen, setIsOpen }) => {
-    const {
-        allImageSharp: { edges },
-    } = useStaticQuery(query);
-    const images = edges.slice(6, 15).map(item => ({
-        original: item.node.original.src,
-    }));
+const PortfolioImageGallery = ({ data, imageIndex, isOpen, setIsOpen }) => {
+    const images = data.map(item => {
+        const imageItem = getImage(item.image.localFile);
+        return { original: imageItem.images.fallback.src };
+    });
+    console.log(images);
 
     const handleCloseGallery = () => {
         setIsOpen(false);
