@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { BiPlus, BiLink } from "react-icons/bi";
-import PortfolioImageGallery from "../ImageGallery/ImageGallery";
+import PortfolioImageGallery from "../ImageGallery/PortfolioImageGallery";
 
 const Container = styled.div`
     max-width: var(--max-width-desktop);
@@ -93,7 +93,9 @@ const Items = ({ data }) => {
 
     return (
         <Container>
-            {isOpen && <PortfolioImageGallery imageIndex={imageIndex} isOpen={isOpen} setIsOpen={setIsOpen} />}
+            {isOpen && (
+                <PortfolioImageGallery data={data} imageIndex={imageIndex} isOpen={isOpen} setIsOpen={setIsOpen} />
+            )}
             {data.map((item, index) => {
                 const imageItem = getImage(item.image.localFile);
                 return (
