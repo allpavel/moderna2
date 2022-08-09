@@ -5,6 +5,7 @@ import { MdMenu, MdClose } from "react-icons/md";
 import Logo from "../Logo/Logo";
 import Navbar from "../Navbar/Navbar";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import { throttle } from "../../utilities/throttle";
 
 const IndexHeader = css`
     background-color: ${({ header }) => (header ? "rgba(30, 67, 86, 0.8)" : "transparent")};
@@ -86,9 +87,11 @@ const Header = () => {
             }
         };
 
-        window.addEventListener("scroll", changeHeaderBackground);
+        const throttledChangeHeaderBackground = throttle(changeHeaderBackground, 200);
 
-        return () => window.removeEventListener("scroll", changeHeaderBackground);
+        window.addEventListener("scroll", throttledChangeHeaderBackground);
+
+        return () => window.removeEventListener("scroll", throttledChangeHeaderBackground);
     }, [header]);
 
     return (
