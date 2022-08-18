@@ -37,7 +37,6 @@ const PortfolioImageGallery = ({ data, imageIndex, isOpen, setIsOpen }) => {
         const imageItem = getImage(item.image.localFile);
         return { original: imageItem.images.fallback.src };
     });
-    console.log(images);
 
     const handleCloseGallery = () => {
         setIsOpen(false);
